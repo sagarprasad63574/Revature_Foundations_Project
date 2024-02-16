@@ -5,6 +5,7 @@ import userAuthSchema from './schemas/userAuth.json' with { type: "json" };
 import userRegisterSchema from './schemas/userRegisterSchema.json' with { type: "json" };
 
 const app = express(); 
+const port = process.env.PORT || 3000; 
 app.use(express.json());
 
 const SECRET_KEY = "SECRET";
@@ -55,7 +56,7 @@ function createToken(user) {
 }
 
 app.listen(3000, () => {
-    console.log(`Started on http://localhost:3000`);
+    console.log(`Started on http://localhost:${port}`);
 });
 
 export default app; 
