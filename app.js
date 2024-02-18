@@ -1,9 +1,9 @@
 const express = require('express');
 const jsonschema = require('jsonschema');
-const jwt = require ('jsonwebtoken');
 const userAuthSchema = require('./schemas/userAuth.json');
 const userRegisterSchema = require('./schemas/userRegisterSchema.json');
-const {getUsers} = require('./dynamodb.js');
+const { createToken } = require('./helpers/tokens.js');
+const {getAllUsers, addUser} = require('./dynamodb.js');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 
 app.get('/users', async (req, res) => {
     try {
-        const users = await getUsers();
+        const users = await getAllUsers();
         res.json(users);
     } catch (err) {
         console.error(err);
@@ -50,25 +50,16 @@ app.post("/register", async function (req, res, next) {
             const errs = validator.errors.map(e => e.stack);
             throw new Error(errs);
         }
-        //const newUser = await User.register({ ...req.body, isAdmin: false });
-        const { username, firstName, lastName, password, email } = req.body;
 
-        let newUser = { "username": username, "password": password };
+        const newUser = await addUser({ ...req.body, isAdmin: false });
+        // const token = createToken(newUser);
+        // console.log(token);
 
-        const token = createToken(newUser);
-        return res.status(201).json({ token });
+        return res.status(201).json(newUser);
     } catch (err) {
         return next(err);
     }
 });
-
-function createToken(user) {
-    let payload = {
-        username: user.username,
-    };
-
-    return jwt.sign(payload, SECRET_KEY);
-}
 
 app.listen(3000, () => {
     console.log(`Started on http://localhost:${port}`);
