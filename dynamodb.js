@@ -94,16 +94,7 @@ const addUser = async (user) => {
     const params = {
         TableName: TABLE_NAME,
         Key: marshall({id: user.id}),
-        Item: marshall(
-            {
-                id: user.id,
-                firstName: user.firstName,
-                lastName: user.lastName,
-                username: user.username,
-                password: user.password,
-                email: user.email,
-            }
-        ),
+        UpdateExpression: `SET username = ${user.username}`,
         ReturnValues: "ALL_NEW",
     };
 

@@ -3,9 +3,6 @@
     "$id": "http://example.com/example.json",
     "type": "object",
     "properties": {
-        "id": {
-            "type": "string"
-        },
         "username": {
             "type": "string",
             "minLength": 1,
@@ -35,7 +32,6 @@
     },
     "additionalProperties": false,
     "required": [
-        "id",
         "username",
         "firstName",
         "lastName",
