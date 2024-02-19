@@ -37,8 +37,9 @@
 
 // module.exports = { getUsers, addUser }
 
-const { DynamoDBClient, ScanCommand, GetItemCommand, PutItemCommand, UpdateItemCommand } = require('@aws-sdk/client-dynamodb');
+const { DynamoDBClient } = require('@aws-sdk/client-dynamodb');
 const { marshall, unmarshall } = require("@aws-sdk/util-dynamodb");
+const { DynamoDBDocumentClient, GetCommand, BatchGetCommand, PutCommand, QueryCommand } = require('@aws-sdk/lib-dynamodb');
 require('dotenv').config();
 
 const dynamoDBClient = new DynamoDBClient({
@@ -49,64 +50,114 @@ const dynamoDBClient = new DynamoDBClient({
     }
 });
 
-const TABLE_NAME = "users";
+const TABLE_NAME = "foundations_project";
+const documentClient = DynamoDBDocumentClient.from(dynamoDBClient);
 
-const getAllUsers = async () => {
-    const params = {
-        TableName: TABLE_NAME,
-    };
+const getTicketsFromUser = async () => {
 
-    let allUsers;
-    try {
-        users = await dynamoDBClient.send(new ScanCommand(params));
-        allUsers = users.Items.map((user) => {
-            return unmarshall(user);
-        });
-        console.log({ users: allUsers });
-    }
-    catch (err) {
-        console.log(err);
-    }
-    return allUsers;
+    const command = new BatchGetCommand({
+        // Each key in this object is the name of a table. This example refers
+        // to a Books table.
+        RequestItems: {
+            foundations_project: {
+                // Each entry in Keys is an object that specifies a primary key.
+                Keys: [
+                    {
+                        username: "test2",
+                    }
+                ],
+                // Only return the "Title" and "PageCount" attributes.
+                ProjectionExpression: "username, tickets",
+            },
+        },
+    });
+
+    const response = await documentClient.send(command);
+    console.log(response.Responses["foundations_project"]);
+    return response;
 }
 
-const getUser = async (id) => {
-    const params = {
+const getUser = async (username) => {
+    const command = new GetCommand({
         TableName: TABLE_NAME,
-        Key: marshall({ id: id })
-    };
+        Key: {
+            username: username,
+        },
+    });
 
-    let users;
-    try {
-        users = await dynamoDBClient.send(new GetItemCommand(params));
-        console.log(unmarshall(users.Item));
-    }
-    catch (err) {
-        console.log(err);
-    }
-    return users;
-}
+    const response = await documentClient.send(command);
+    console.log(response);
+    return (response.Item) ? response.Item : null;
+};
 
-
-const addUser = async (user) => {
-    //console.log(getUser("1"));
-
-    const params = {
+const addNewUser = async (user) => {
+    const command = new PutCommand({
         TableName: TABLE_NAME,
-        Key: marshall({id: user.id}),
-        UpdateExpression: `SET username = ${user.username}`,
-        ReturnValues: "ALL_NEW",
-    };
+        Item: {
+            username: user.username,
+            password: user.password,
+            isAdmin : user.isAdmin
+        },
+    });
 
-    let newUser;
-    try {
-        newUser = await dynamoDBClient.send(new UpdateItemCommand(params));
-        console.log(newUser);
-    }
-    catch (err) {
-        console.log(err);
-    }
-    return newUser;
-}
+    const response = await documentClient.send(command);
+    console.log(response);
+    return response;
+};
 
-module.exports = { getAllUsers, getUser, addUser }
+const addNewTicket = async ({username, amount, description, status}) => {
+    const command = new PutCommand({
+        TableName: TABLE_NAME,
+        Item: {
+            username,
+            amount,
+            description,
+            status
+        },
+    });
+
+    const response = await documentClient.send(command);
+    console.log(response);
+    return response;
+};
+
+// const getUser = async (id) => {
+//     const params = {
+//         TableName: TABLE_NAME,
+//         Key: marshall({ id: id })
+//     };
+
+//     let users;
+//     try {
+//         users = await dynamoDBClient.send(new GetItemCommand(params));
+//         console.log(unmarshall(users.Item));
+//     }
+//     catch (err) {
+//         console.log(err);
+//     }
+//     return users;
+// }
+
+
+// const addUser = async (user) => {
+//     //console.log(getUser("1"));
+
+//     const params = {
+//         TableName: TABLE_NAME,
+//         Key: marshall({ id: user.id }),
+//         UpdateExpression: `SET username = ${user.username}`,
+//         ReturnValues: "ALL_NEW",
+//     };
+
+//     let newUser;
+//     try {
+//         newUser = await dynamoDBClient.send(new UpdateItemCommand(params));
+//         console.log(newUser);
+//     }
+//     catch (err) {
+//         console.log(err);
+//     }
+//     return newUser;
+// }
+
+module.exports = { getTicketsFromUser, getUser, addNewUser, addNewTicket }

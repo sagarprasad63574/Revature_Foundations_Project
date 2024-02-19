@@ -5,7 +5,7 @@ const userRegisterSchema = require('./schemas/userRegisterSchema.json');
 const ticketAddSchema = require('./schemas/ticketAddSchema.json');
 const { authenticateJWT, ensureLoggedIn } = require("./middleware/auth");
 const { createToken } = require('./helpers/tokens.js');
-const { getAllUsers, addUser } = require('./dynamodb.js');
+const { getTicketsFromUser, getUser, addNewUser, addNewTicket } = require('./dynamodb.js');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -20,7 +20,7 @@ app.get('/', ensureLoggedIn, (req, res) => {
 
 app.get('/users', async (req, res) => {
     try {
-        const users = await getAllUsers();
+        const users = await getTicketsFromUser();
         res.json(users);
     } catch (err) {
         console.error(err);
@@ -38,18 +38,16 @@ app.post("/login", async function (req, res, next) {
 
         //check if username is in the database. if no user found return an error message otherwise return user
 
-        const user = req.body
-        const query = usersArr.filter((u) => u.username == user.username && u.password == user.password);
+        const { username, password } = req.body
+        const findUser = await getUser(username);
+        if (!findUser || password !== findUser.password) return res.status(400).json("Username/Password is invalid.");
 
-        if (query.length <= 0) {
-            console.log("Username/password not found. Try again");
-            throw new Error("Invalid username/password");
-        };
+        console.log(findUser);
 
-        const token = createToken({ ...user, isAdmin: false });
-        console.log(token);
+        const token = createToken({ ...findUser, isAdmin: false });
+        // console.log(token);
 
-        return res.json({ token });
+        return res.status(200).json({token, ...findUser});
     } catch (err) {
         return next(err);
     }
@@ -63,29 +61,20 @@ app.post("/register", async function (req, res, next) {
             throw new Error(errs);
         }
 
-        //add new user to the database. if username already exists in the database return an error message 
-        //overwise add the new user and return the user 
-        //{id: "username", password: "password", position: "position"}
-
-        //const newUser = await addUser({ ...req.body, isAdmin: false });
-
-
         const newUser = req.body;
 
-        const query = usersArr.filter((user) => user.username == newUser.username);
+        //Check if username is already in the database. If so return reponse 400 and Message: Username already in use.
+        const getUsername = await getUser(newUser.username);
+        if (getUsername) return res.status(400).json("Username already in use. Try again");
 
-        if (query.length > 0) {
-            console.log("Username not available. Try a different username");
-            throw new Error("Try a different username");
-        };
+        //Create a new user and add to database and return response 201 and message of user object that was created.
+        const createdNewUser = await addNewUser({...newUser, isAdmin : false});
+        const returnUser = await getUser(newUser.username);
 
-        usersArr.push({ ...newUser });
-        console.log(usersArr);
+        // const token = createToken({ ...newUser, isAdmin: false });
+        // console.log(token);
 
-        const token = createToken({ ...newUser, isAdmin: false });
-        console.log(token);
-
-        return res.status(201).json({ ...newUser });
+        return res.status(201).json({ message: "Created new user", username: returnUser.username });
     } catch (err) {
         return next(err);
     }
@@ -101,30 +90,21 @@ app.post("/ticket", ensureLoggedIn, async function (req, res, next) {
 
         const ticket = req.body;
 
+        if (ticket.amount <= 0) return res.status(400).json("Amount must be greater than 0"); 
+
         //send the ticket information(amount, price, and status) to be added to the database associated with a user 
         //{id: "username", password: "password", position: "position", tickets: <list tickets> }
         //tickets = [amount: 100, description: "this is $100", status: "Pending(by default)"] //push()
+        
+        const username = res.locals.user.username;
 
-        const getUser = usersArr.map((user, index) => {
-            if (user.username == "john123") {
-                console.log(index);
-            }
-        });
-
-        getUser.tickets = [...getUser.tickets, ticket];
-
-        // if (query.length > 0) {
-        //     console.log("Username not available. Try a different username");
-        //     throw new Error("Try a different username");
-        // };
-
-        // usersArr.push({ ...newUser });
-        // console.log(usersArr);
+        const newTicket = await addNewTicket({...ticket, status: "Pending", username});
+        console.log(newTicket);
 
         // const token = createToken({ ...newUser, isAdmin: false });
         // console.log(token);
 
-        return res.status(201).json({ });
+        return res.status(201).json({});
     } catch (err) {
         return next(err);
     }
