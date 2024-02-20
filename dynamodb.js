@@ -39,7 +39,7 @@
 
 const { DynamoDBClient } = require('@aws-sdk/client-dynamodb');
 const { marshall, unmarshall } = require("@aws-sdk/util-dynamodb");
-const { DynamoDBDocumentClient, GetCommand, BatchGetCommand, PutCommand, QueryCommand } = require('@aws-sdk/lib-dynamodb');
+const { DynamoDBDocumentClient, GetCommand, BatchGetCommand, PutCommand, QueryCommand, UpdateCommand } = require('@aws-sdk/lib-dynamodb');
 require('dotenv').config();
 
 const dynamoDBClient = new DynamoDBClient({
@@ -53,17 +53,17 @@ const dynamoDBClient = new DynamoDBClient({
 const TABLE_NAME = "foundations_project";
 const documentClient = DynamoDBDocumentClient.from(dynamoDBClient);
 
-const getTicketsFromUser = async () => {
+const getTicketsFromUser = async (username) => {
 
     const command = new BatchGetCommand({
         // Each key in this object is the name of a table. This example refers
         // to a Books table.
         RequestItems: {
-            foundations_project: {
+            tickets: {
                 // Each entry in Keys is an object that specifies a primary key.
                 Keys: [
                     {
-                        username: "test2",
+                        username: username,
                     }
                 ],
                 // Only return the "Title" and "PageCount" attributes.
@@ -73,7 +73,7 @@ const getTicketsFromUser = async () => {
     });
 
     const response = await documentClient.send(command);
-    console.log(response.Responses["foundations_project"]);
+    console.log(response.Responses["tickets"]);
     return response;
 }
 
@@ -120,6 +120,24 @@ const addNewTicket = async ({username, amount, description, status}) => {
     console.log(response);
     return response;
 };
+
+const addNewTicketv2 = async ({username, amount, description, status}) => {
+    const command = new UpdateCommand({
+      TableName: TABLE_NAME,
+      Key: {
+        username: username,
+      },
+      UpdateExpression: "set tickets = :tickets",
+      ExpressionAttributeValues: {
+        ":tickets": [amount, description, status],
+      },
+      ReturnValues: "ALL_NEW",
+    });
+  
+    const response = await documentClient.send(command);
+    console.log(response);
+    return response;
+  };
 
 // const getUser = async (id) => {
 //     const params = {

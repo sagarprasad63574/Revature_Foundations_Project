@@ -101,10 +101,45 @@ app.post("/ticket", ensureLoggedIn, async function (req, res, next) {
         const newTicket = await addNewTicket({...ticket, status: "Pending", username});
         console.log(newTicket);
 
+        // {
+        //     "username": "john",
+        //     "tickets": ["id": "1", "amount": 100, "description": "this is the refund amount", "status": "pending"]
+        // }
+
+        // {
+        //     "id": 1,
+        //     "amount": 100,
+        //     "description": "this is the refund amount",
+        //     "status": "pending"
+        // }
+
         // const token = createToken({ ...newUser, isAdmin: false });
         // console.log(token);
 
         return res.status(201).json({});
+    } catch (err) {
+        return next(err);
+    }
+});
+
+app.post("/ticket/:username", async function (req, res, next) {
+    try {
+        const validator = jsonschema.validate(req.body, userRegisterSchema);
+        if (!validator.valid) {
+            const errs = validator.errors.map(e => e.stack);
+            throw new Error(errs);
+        }
+
+        const username = req.params.username;
+
+        //Check if user is in the database.
+        const getUser = await getUser(username);
+        if (!getUser) return res.status(400).json("No user found");
+
+
+        const tickets = await getTicketsFromUser(username);
+
+        return res.status(201).json({ message: "Created new user", username: returnUser.username });
     } catch (err) {
         return next(err);
     }
