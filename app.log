@@ -103,3 +103,9 @@
 2024-02-21T22:10:18.056Z [error]: instance.username does not meet minimum length of 5,instance.password does not meet minimum length of 5,instance.name is not of a type(s) string,instance.email does not conform to the "email" format
 2024-02-21T22:10:37.870Z [info]: Incoming POST: /auth/register
 2024-02-21T22:10:37.877Z [error]: .username does not meet minimum length of 5,.password does not meet minimum length of 5,.name is not of a type(s) string,.email does not conform to the "email" format
+2024-02-21T22:10:49.969Z [info]: Incoming POST: /auth/register
+2024-02-21T22:10:49.976Z [error]: username does not meet minimum length of 5,password does not meet minimum length of 5,name is not of a type(s) string,email does not conform to the "email" format
+2024-02-21T22:11:08.950Z [info]: Incoming POST: /auth/register
+2024-02-21T22:11:08.952Z [error]: username does not meet minimum length of 5,password does not meet minimum length of 5,name is not of a type(s) string
+2024-02-21T22:11:14.583Z [info]: Incoming POST: /auth/register
+2024-02-21T22:11:14.585Z [error]: username does not meet minimum length of 5,password does not meet minimum length of 5
