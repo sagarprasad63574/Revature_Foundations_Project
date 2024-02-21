@@ -109,3 +109,5 @@
 2024-02-21T22:11:08.952Z [error]: username does not meet minimum length of 5,password does not meet minimum length of 5,name is not of a type(s) string
 2024-02-21T22:11:14.583Z [info]: Incoming POST: /auth/register
 2024-02-21T22:11:14.585Z [error]: username does not meet minimum length of 5,password does not meet minimum length of 5
+2024-02-21T22:17:15.195Z [info]: Incoming POST: /auth/register
+2024-02-21T22:17:15.200Z [error]: username does not meet minimum length of 5,password does not meet minimum length of 5
