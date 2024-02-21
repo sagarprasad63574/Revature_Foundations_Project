@@ -1,0 +1,105 @@
+2024-02-21T18:45:55.810Z [info]: Incoming GET: /
+2024-02-21T18:46:07.238Z [info]: Incoming GET: /auth
+2024-02-21T18:46:07.376Z [error]: 1 validation error detected: Value null at 'tableName' failed to satisfy constraint: Member must not be null
+2024-02-21T18:47:25.165Z [info]: Incoming GET: /auth
+2024-02-21T19:13:06.273Z [info]: Incoming GET: /
+2024-02-21T19:13:24.715Z [info]: Incoming GET: /auth
+2024-02-21T19:14:38.091Z [info]: Incoming POST: /auth/register
+2024-02-21T19:16:44.182Z [info]: Incoming POST: /auth/login
+2024-02-21T19:18:11.341Z [info]: Incoming GET: /auth
+2024-02-21T19:20:18.088Z [info]: Incoming GET: /auth
+2024-02-21T19:20:43.696Z [info]: Incoming POST: /auth/register
+2024-02-21T19:21:37.887Z [info]: Incoming POST: /auth/register
+2024-02-21T19:39:57.677Z [info]: Incoming GET: /auth
+2024-02-21T19:41:09.074Z [info]: Incoming GET: /auth?name=smith
+2024-02-21T19:41:09.232Z [error]: 1 validation error detected: Value null at 'key' failed to satisfy constraint: Member must not be null
+2024-02-21T19:42:43.121Z [info]: Incoming GET: /auth?name=smith
+2024-02-21T19:42:43.261Z [error]: The provided key element does not match the schema
+2024-02-21T19:43:14.541Z [info]: Incoming GET: /auth?name=45a9f84e-c4fd-4601-bf1e-8468e36e0a42
+2024-02-21T19:43:14.690Z [error]: The provided key element does not match the schema
+2024-02-21T19:43:38.194Z [info]: Incoming GET: /auth?name=%2245a9f84e-c4fd-4601-bf1e-8468e36e0a42%22
+2024-02-21T19:43:38.214Z [error]: The provided key element does not match the schema
+2024-02-21T19:44:17.037Z [info]: Incoming GET: /auth?name=45a9f84e-c4fd-4601-bf1e-8468e36e0a42
+2024-02-21T19:44:17.057Z [error]: The provided key element does not match the schema
+2024-02-21T19:45:00.853Z [info]: Incoming GET: /auth?name=45a9f84e-c4fd-4601-bf1e-8468e36e0a42
+2024-02-21T19:45:00.994Z [error]: The provided key element does not match the schema
+2024-02-21T19:45:35.029Z [info]: Incoming GET: /auth?name=45a9f84e-c4fd-4601-bf1e-8468e36e0a42
+2024-02-21T19:45:35.184Z [error]: The provided key element does not match the schema
+2024-02-21T19:45:50.718Z [info]: Incoming GET: /auth?name=45a9f84e-c4fd-4601-bf1e-8468e36e0a42
+2024-02-21T19:45:50.857Z [error]: The provided key element does not match the schema
+2024-02-21T19:46:47.941Z [info]: Incoming GET: /auth?name=45a9f84e-c4fd-4601-bf1e-8468e36e0a42
+2024-02-21T19:46:48.094Z [error]: The provided key element does not match the schema
+2024-02-21T19:48:22.101Z [info]: Incoming GET: /auth?name=45a9f84e-c4fd-4601-bf1e-8468e36e0a42
+2024-02-21T19:48:22.234Z [error]: The provided key element does not match the schema
+2024-02-21T19:48:39.771Z [info]: Incoming GET: /auth?name=45a9f84e-c4fd-4601-bf1e-8468e36e0a42
+2024-02-21T19:48:53.261Z [info]: Incoming GET: /auth?name=smith
+2024-02-21T21:23:52.962Z [info]: Incoming POST: /auth/register
+2024-02-21T21:25:04.574Z [info]: Incoming POST: /auth/register
+2024-02-21T21:25:04.575Z [error]: instance.password does not meet minimum length of 5
+2024-02-21T21:27:30.249Z [info]: Incoming POST: /auth/register
+2024-02-21T21:31:59.968Z [info]: Incoming POST: /auth/register
+2024-02-21T21:36:52.808Z [info]: Incoming POST: /auth/register
+2024-02-21T21:37:12.098Z [info]: Incoming POST: /auth/register
+2024-02-21T21:37:54.925Z [info]: Incoming POST: /auth/register
+2024-02-21T21:38:30.475Z [info]: Incoming POST: /auth/register
+2024-02-21T21:38:30.477Z [error]: instance.password does not meet minimum length of 5
+2024-02-21T21:39:33.332Z [info]: Incoming POST: /auth/register
+2024-02-21T21:39:33.337Z [error]: instance.password does not meet minimum length of 5
+2024-02-21T21:40:24.284Z [info]: Incoming POST: /auth/register
+2024-02-21T21:40:24.289Z [error]: instance.password does not meet minimum length of 5
+2024-02-21T21:41:24.188Z [info]: Incoming POST: /auth/register
+2024-02-21T21:41:24.189Z [error]: instance.password does not meet minimum length of 5,instance.name is not of a type(s) string
+2024-02-21T21:42:59.536Z [info]: Incoming POST: /auth/register
+2024-02-21T21:46:26.188Z [info]: Incoming POST: /auth/register
+2024-02-21T21:47:00.426Z [info]: Incoming POST: /auth/register
+2024-02-21T21:47:05.632Z [info]: Incoming POST: /auth/register
+2024-02-21T21:47:05.633Z [error]: instance.password does not meet minimum length of 5
+2024-02-21T21:47:34.042Z [info]: Incoming POST: /auth/register
+2024-02-21T21:47:34.048Z [error]: instance.password does not meet minimum length of 5
+2024-02-21T21:47:48.814Z [info]: Incoming POST: /auth/register
+2024-02-21T21:47:48.815Z [error]: instance.password does not meet minimum length of 5
+2024-02-21T21:47:51.932Z [info]: Incoming POST: /auth/register
+2024-02-21T21:47:51.934Z [error]: instance.password does not meet minimum length of 5,instance.name does not meet minimum length of 1
+2024-02-21T21:48:03.724Z [info]: Incoming POST: /auth/register
+2024-02-21T21:48:03.725Z [error]: instance.password does not meet minimum length of 5,instance.name is not of a type(s) string
+2024-02-21T21:48:15.123Z [info]: Incoming POST: /auth/register
+2024-02-21T21:48:15.124Z [error]: instance.username does not meet minimum length of 5,instance.password does not meet minimum length of 5,instance.name is not of a type(s) string
+2024-02-21T21:48:23.314Z [info]: Incoming POST: /auth/register
+2024-02-21T21:48:23.315Z [error]: instance.username does not meet minimum length of 5,instance.password does not meet minimum length of 5,instance.name is not of a type(s) string,instance.email does not conform to the "email" format
+2024-02-21T21:54:27.671Z [info]: Incoming POST: /auth/register
+2024-02-21T21:54:27.678Z [error]: instance.username does not meet minimum length of 5,instance.password does not meet minimum length of 5,instance.name is not of a type(s) string,instance.email does not conform to the "email" format
+2024-02-21T21:57:34.816Z [info]: Incoming POST: /auth/register
+2024-02-21T21:57:34.823Z [error]: instance.username does not meet minimum length of 5,instance.password does not meet minimum length of 5,instance.name is not of a type(s) string,instance.email does not conform to the "email" format
+2024-02-21T21:58:58.198Z [info]: Incoming POST: /auth/register
+2024-02-21T21:58:58.204Z [error]: ,,,
+2024-02-21T22:00:00.606Z [info]: Incoming POST: /auth/register
+2024-02-21T22:00:00.613Z [error]: instance.username does not meet minimum length of 5,instance.password does not meet minimum length of 5,instance.name is not of a type(s) string,instance.email does not conform to the "email" format
+2024-02-21T22:02:14.433Z [info]: Incoming POST: /auth/register
+2024-02-21T22:02:14.439Z [error]: ,,,
+2024-02-21T22:02:49.724Z [info]: Incoming POST: /auth/register
+2024-02-21T22:02:49.730Z [error]: minLength,minLength,type,format
+2024-02-21T22:03:23.205Z [info]: Incoming POST: /auth/register
+2024-02-21T22:03:23.211Z [error]: does not meet minimum length of 5,does not meet minimum length of 5,is not of a type(s) string,does not conform to the "email" format
+2024-02-21T22:03:54.217Z [info]: Incoming POST: /auth/register
+2024-02-21T22:03:54.224Z [error]: instance.username,instance.password,instance.name,instance.email
+2024-02-21T22:04:38.077Z [info]: Incoming POST: /auth/register
+2024-02-21T22:04:38.084Z [error]: 5,5,string,email
+2024-02-21T22:05:06.271Z [info]: Incoming POST: /auth/register
+2024-02-21T22:05:06.278Z [error]: 1,1234,234,smith
+2024-02-21T22:05:47.830Z [info]: Incoming POST: /auth/register
+2024-02-21T22:05:47.837Z [error]: [object Object],[object Object],[object Object],[object Object]
+2024-02-21T22:06:12.801Z [info]: Incoming POST: /auth/register
+2024-02-21T22:06:12.808Z [error]: username,password,name,email
+2024-02-21T22:06:50.449Z [info]: Incoming POST: /auth/register
+2024-02-21T22:07:22.911Z [info]: Incoming POST: /auth/register
+2024-02-21T22:07:22.917Z [error]: does not meet minimum length of 5,does not meet minimum length of 5,is not of a type(s) string,does not conform to the "email" format
+2024-02-21T22:07:37.628Z [info]: Incoming POST: /auth/register
+2024-02-21T22:07:37.635Z [error]: does not meet minimum length of 5,does not meet minimum length of 5,is not of a type(s) string,does not conform to the "email" format
+2024-02-21T22:07:59.303Z [info]: Incoming POST: /auth/register
+2024-02-21T22:07:59.310Z [error]: instance.username does not meet minimum length of 5,instance.password does not meet minimum length of 5,instance.name is not of a type(s) string,instance.email does not conform to the "email" format
+2024-02-21T22:09:15.815Z [info]: Incoming POST: /auth/register
+2024-02-21T22:09:15.821Z [error]: string,string,string,string
+2024-02-21T22:10:18.050Z [info]: Incoming POST: /auth/register
+2024-02-21T22:10:18.056Z [error]: instance.username does not meet minimum length of 5,instance.password does not meet minimum length of 5,instance.name is not of a type(s) string,instance.email does not conform to the "email" format
+2024-02-21T22:10:37.870Z [info]: Incoming POST: /auth/register
+2024-02-21T22:10:37.877Z [error]: .username does not meet minimum length of 5,.password does not meet minimum length of 5,.name is not of a type(s) string,.email does not conform to the "email" format
