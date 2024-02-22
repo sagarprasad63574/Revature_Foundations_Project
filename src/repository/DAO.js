@@ -50,7 +50,7 @@ const getItem = async (key) => {
     }
 }
 
-const createItem = async (item) => {
+const createEmployee = async (item) => {
     //name, username, password, email, role=employee, employee_id, join_date, tickets = []
 
     const command = new PutCommand({
@@ -66,18 +66,23 @@ const createItem = async (item) => {
         return null;
     }
 }
-// const getUser = async (username) => {
-//     const command = new GetCommand({
-//         TableName: TABLE_NAME,
-//         Key: {
-//             username: username,
-//         },
-//     });
 
-//     const response = await documentClient.send(command);
-//     console.log(response);
-//     return (response.Item) ? response.Item : null;
-// };
+const getUserByUsername = async (username) => {
+    const command = new QueryCommand({
+        TableName,
+        IndexName: "username-index",
+        KeyConditionExpression: "username = :username",
+        ExpressionAttributeValues: { ":username" : username}
+    });
+
+    try {
+        const data = await documentClient.send(command);
+        return data.Items[0];
+    } catch (error) {
+        logger.error(error);
+        return null;
+    }
+};
 
 // const addNewUser = async (user) => {
 //     const command = new PutCommand({
@@ -149,4 +154,9 @@ const createItem = async (item) => {
 //     return newUser;
 // }
 
-module.exports = { getAllItems, getItem, createItem }
+module.exports = {
+    getAllItems,
+    getItem,
+    getUserByUsername,
+    createEmployee
+}
