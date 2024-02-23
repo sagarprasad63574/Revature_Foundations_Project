@@ -3,22 +3,25 @@
     "$id": "http://example.com/example.json",
     "type": "object",
     "properties": {
-        "amount": {
+        "ticket_id": {
             "type": "number",
             "minLength": 1,
-            "exclusiveMinimum": 0
+            "minimum": 0
         },
-        "description": {
+        "username": {
             "type": "string",
-            "minLength": 1
+            "minLength": 5,
+            "maxLength": 30
         },
         "status": {
-            "type": "string"
+            "type": "string",
+            "enum": ["Approved", "Denied"]
         }
     },
     "additionalProperties": false,
     "required": [
-        "amount",
-        "description"
+        "ticket_id",
+        "username",
+        "status"
     ]
 }

@@ -1,17 +1,18 @@
-const DAO = require('../repository/DAO');
+const userDAO = require('../repository/userDAO');
 const uuid = require('uuid');
 const jsonschema = require('jsonschema');
 const userAuthSchema = require('../schemas/userAuth.json');
 const userRegisterSchema = require('../schemas/userRegisterSchema.json');
-const ticketAddSchema = require('../schemas/ticketAddSchema.json');
-const logger = require('../util/logger')
+const logger = require('../util/logger');
+const bcrypt = require('bcrypt');
+const { BCRYPT_WORK_FACTOR } = require('../config')
 
 const getAllItem = async () => {
-    const items = await DAO.getAllItems();
+    const items = await userDAO.getAllItems();
     return items;
 }
 
-const registerEmployee = async (receivedData) => {
+const registerUser = async (receivedData) => {
     let employee_id = uuid.v4();
     let join_date = Math.floor(new Date().getTime() / 1000);
     let role = receivedData.role || "employee"
@@ -21,19 +22,21 @@ const registerEmployee = async (receivedData) => {
     if (!response) return { response: false, errors: errors }
 
     let duplicatedUser = await getUserByUsername(receivedData.username);
-    if (duplicatedUser) return { reponse: false, errors: "Duplicated username" }
+    if (duplicatedUser) return { response: false, errors: "Duplicated username" }
 
-    let data = await DAO.createEmployee({
+    let hashedPassword = await bcrypt.hash(receivedData.password, BCRYPT_WORK_FACTOR);
+
+    let data = await userDAO.createUser({
         employee_id: employee_id,
         join_date: join_date,
         name: receivedData.name,
         username: receivedData.username,
-        password: receivedData.password,
+        password: hashedPassword,
         email: receivedData.email,
         role: role,
         tickets: tickets
     });
-    return { response: true, data: data };
+    return { response: true, message: "user created" };
 
 }
 
@@ -47,16 +50,27 @@ function validateRegister(receivedData) {
     return { response: true };
 }
 
-const loginEmployee = async (receivedData) => {
+const loginUser = async (receivedData) => {
     let { response, errors } = validateLogin(receivedData);
     if (!response) return { response: false, errors: errors };
 
-    const employee = await getUserByUsername(receivedData.username);
-    if (!employee) return { response: false, errors: "No user found!" }
+    const user = await getUserByUsername(receivedData.username);
+    if (!user) return { response: false, errors: "No user found!" }
 
-    if (employee.password !== receivedData.password) return { response: false, errors: "Incorrect password." }
+    const isValidPassword = await bcrypt.compare(receivedData.password, user.password);
+    if (!isValidPassword) return { response: false, errors: "Incorrect password." }
 
-    return { response: true, data: employee }
+    return {
+        response: true,
+        data: {
+            employee_id: user.employee_id,
+            name: user.name,
+            username: user.username,
+            email: user.email,
+            role: user.role,
+            tickets: user.tickets
+        }
+    }
 }
 
 function validateLogin(receivedData) {
@@ -71,20 +85,24 @@ function validateLogin(receivedData) {
 
 }
 
-const getItem = async (key) => {
-    const item = await DAO.getItem(key);
-    return item;
-}
-
 const getUserByUsername = async (username) => {
-    const data = await DAO.getUserByUsername(username);
+    const data = await userDAO.getUserByUsername(username);
     return (data) ? data : null;
 }
 
+const deleteUser = async (username) => {
+    const user = await getUserByUsername(username);
+    if (user) {
+        const data = await userDAO.deleteUser(user.employee_id);
+        return { response: true, message: "User deleted!" };
+    }
+
+    return { response: false, message: "No username found!" }
+}
 module.exports = {
     getAllItem,
-    getItem,
     getUserByUsername,
-    registerEmployee,
-    loginEmployee
+    registerUser,
+    loginUser,
+    deleteUser
 }
