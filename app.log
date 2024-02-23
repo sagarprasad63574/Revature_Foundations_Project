@@ -680,3 +680,270 @@
 2024-02-23T06:26:39.738Z [info]: Incoming PUT: /tickets/0
 2024-02-23T06:27:14.181Z [info]: Incoming PUT: /tickets/0
 2024-02-23T06:27:18.845Z [info]: Incoming PUT: /tickets/0
+2024-02-23T06:40:45.486Z [error]: username does not meet minimum length of 5
+2024-02-23T06:40:45.504Z [error]: password does not meet minimum length of 5
+2024-02-23T06:40:45.505Z [error]: email does not conform to the "email" format
+2024-02-23T06:40:45.507Z [error]: requires property "username"
+2024-02-23T06:40:45.572Z [error]: username does not meet minimum length of 5
+2024-02-23T06:40:45.573Z [error]: password does not meet minimum length of 5
+2024-02-23T06:40:46.281Z [error]: amount must be strictly greater than 0
+2024-02-23T06:40:46.307Z [error]: description does not meet minimum length of 1
+2024-02-23T06:40:46.329Z [error]: amount is not of a type(s) number
+2024-02-23T06:40:46.351Z [error]: requires property "amount",requires property "description"
+2024-02-23T15:28:48.141Z [info]: Incoming GET: /tickets
+2024-02-23T15:32:39.610Z [info]: Incoming POST: /auth/login
+2024-02-23T15:32:39.612Z [error]: username does not meet minimum length of 5
+2024-02-23T15:32:45.794Z [info]: Incoming POST: /auth/login
+2024-02-23T15:33:10.098Z [info]: Incoming GET: /tickets
+2024-02-23T15:33:19.920Z [info]: Incoming GET: /tickets
+2024-02-23T15:54:55.157Z [info]: Incoming POST: /auth/login
+2024-02-23T15:55:05.578Z [info]: Incoming GET: /tickets
+2024-02-23T15:55:50.873Z [info]: Incoming POST: /tickets
+2024-02-23T15:56:30.502Z [info]: Incoming GET: /tickets
+2024-02-23T15:57:35.374Z [info]: Incoming GET: /tickets/0
+2024-02-23T15:57:35.375Z [error]: is not of a type(s) object
+2024-02-23T15:58:20.702Z [info]: Incoming GET: /tickets/0
+2024-02-23T15:58:20.704Z [error]: is not of a type(s) object
+2024-02-23T16:00:06.350Z [info]: Incoming GET: /tickets/0
+2024-02-23T16:00:18.732Z [info]: Incoming GET: /tickets
+2024-02-23T16:01:25.547Z [info]: Incoming GET: /tickets/0
+2024-02-23T16:02:06.765Z [info]: Incoming GET: /tickets/0
+2024-02-23T16:02:23.001Z [info]: Incoming GET: /tickets/0
+2024-02-23T16:03:40.944Z [info]: Incoming GET: /tickets/0
+2024-02-23T16:03:47.873Z [info]: Incoming GET: /tickets/1
+2024-02-23T16:03:53.526Z [info]: Incoming GET: /tickets/2
+2024-02-23T16:04:03.020Z [info]: Incoming GET: /tickets/-1
+2024-02-23T16:04:03.021Z [error]: ticket_id must be greater than or equal to 0
+2024-02-23T16:05:04.452Z [info]: Incoming GET: /tickets/0
+2024-02-23T16:09:02.581Z [info]: Incoming POST: /auth/login
+2024-02-23T16:09:35.680Z [info]: Incoming PUT: /tickets/0
+2024-02-23T16:09:50.251Z [info]: Incoming PUT: /tickets/0
+2024-02-23T16:11:55.437Z [info]: Incoming PUT: /tickets/0
+2024-02-23T16:12:02.575Z [info]: Incoming PUT: /tickets/1
+2024-02-23T16:13:42.004Z [info]: Incoming PUT: /tickets/1
+2024-02-23T16:14:33.313Z [info]: Incoming PUT: /tickets/1
+2024-02-23T16:15:44.779Z [info]: Incoming PUT: /tickets/1
+2024-02-23T16:15:54.942Z [info]: Incoming PUT: /tickets/1
+2024-02-23T16:19:32.037Z [info]: Incoming PUT: /tickets/1
+2024-02-23T16:26:57.549Z [info]: Incoming PUT: /tickets/1
+2024-02-23T16:27:03.915Z [info]: Incoming PUT: /tickets/1
+2024-02-23T16:27:19.535Z [info]: Incoming POST: /tickets
+2024-02-23T16:27:39.432Z [info]: Incoming GET: /tickets
+2024-02-23T16:28:06.186Z [info]: Incoming PUT: /tickets/2
+2024-02-23T16:29:19.607Z [info]: Incoming PUT: /tickets/2
+2024-02-23T16:29:34.333Z [info]: Incoming PUT: /tickets/2
+2024-02-23T16:29:39.910Z [info]: Incoming GET: /tickets
+2024-02-23T16:29:47.877Z [info]: Incoming PUT: /tickets/1
+2024-02-23T16:29:57.111Z [info]: Incoming PUT: /tickets/0
+2024-02-23T16:30:24.760Z [info]: Incoming PUT: /tickets/0
+2024-02-23T16:30:29.137Z [info]: Incoming PUT: /tickets/3
+2024-02-23T16:30:34.173Z [info]: Incoming PUT: /tickets/2
+2024-02-23T16:30:39.380Z [info]: Incoming PUT: /tickets/1
+2024-02-23T16:30:44.446Z [info]: Incoming GET: /tickets
+2024-02-23T16:33:07.543Z [info]: Incoming POST: /tickets
+2024-02-23T16:33:51.370Z [info]: Incoming POST: /tickets
+2024-02-23T16:39:02.904Z [info]: Incoming POST: /tickets
+2024-02-23T16:39:03.045Z [error]: Either the KeyConditions or KeyConditionExpression parameter must be specified in the request.
+2024-02-23T16:39:31.170Z [info]: Incoming POST: /tickets
+2024-02-23T16:39:31.310Z [error]: 1 validation error detected: Value null at 'keyConditions.employee_id.member.comparisonOperator' failed to satisfy constraint: Member must not be null
+2024-02-23T16:41:06.703Z [info]: Incoming POST: /tickets
+2024-02-23T16:44:56.465Z [info]: Incoming POST: /tickets
+2024-02-23T17:07:23.181Z [info]: Incoming POST: /auth/login
+2024-02-23T17:08:02.801Z [info]: Incoming GET: /tickets
+2024-02-23T17:08:02.902Z [error]: Invalid KeyConditionExpression: Attribute name is a reserved keyword; reserved keyword: role
+2024-02-23T17:08:43.552Z [info]: Incoming GET: /tickets
+2024-02-23T17:08:43.677Z [error]: Invalid KeyConditionExpression: Attribute name is a reserved keyword; reserved keyword: role
+2024-02-23T17:09:49.215Z [info]: Incoming GET: /tickets
+2024-02-23T17:10:26.953Z [info]: Incoming GET: /tickets
+2024-02-23T17:11:05.311Z [info]: Incoming GET: /tickets
+2024-02-23T17:11:24.322Z [info]: Incoming GET: /tickets
+2024-02-23T17:13:39.302Z [info]: Incoming GET: /tickets
+2024-02-23T17:15:14.451Z [info]: Incoming GET: /tickets
+2024-02-23T17:17:24.232Z [info]: Incoming GET: /tickets
+2024-02-23T17:17:58.837Z [info]: Incoming GET: /tickets
+2024-02-23T17:18:10.053Z [info]: Incoming POST: /auth/login
+2024-02-23T17:18:22.730Z [info]: Incoming GET: /tickets
+2024-02-23T17:21:04.175Z [info]: Incoming GET: /tickets
+2024-02-23T17:21:04.319Z [error]: One or more parameter values were invalid: Condition parameter type does not match schema type
+2024-02-23T17:22:08.293Z [info]: Incoming GET: /tickets
+2024-02-23T17:23:00.451Z [info]: Incoming GET: /tickets
+2024-02-23T17:24:22.863Z [info]: Incoming GET: /tickets
+2024-02-23T17:51:16.153Z [info]: Incoming GET: /tickets
+2024-02-23T17:53:40.234Z [info]: Incoming GET: /tickets
+2024-02-23T17:54:14.258Z [info]: Incoming GET: /tickets
+2024-02-23T17:55:23.321Z [info]: Incoming GET: /tickets
+2024-02-23T17:57:55.644Z [info]: Incoming GET: /tickets
+2024-02-23T18:02:15.835Z [info]: Incoming GET: /tickets
+2024-02-23T18:04:37.041Z [info]: Incoming GET: /tickets
+2024-02-23T18:15:05.759Z [info]: Incoming GET: /tickets
+2024-02-23T18:16:35.313Z [info]: Incoming GET: /tickets
+2024-02-23T18:18:09.078Z [info]: Incoming GET: /tickets
+2024-02-23T18:19:13.248Z [info]: Incoming POST: /auth/login
+2024-02-23T18:19:27.006Z [info]: Incoming PUT: /tickets/1
+2024-02-23T18:19:32.154Z [info]: Incoming PUT: /tickets/2
+2024-02-23T18:19:38.822Z [info]: Incoming PUT: /tickets/3
+2024-02-23T18:20:16.606Z [info]: Incoming GET: /tickets
+2024-02-23T20:52:08.276Z [error]: username does not meet minimum length of 5
+2024-02-23T20:52:08.282Z [error]: password does not meet minimum length of 5
+2024-02-23T20:52:08.283Z [error]: email does not conform to the "email" format
+2024-02-23T20:52:08.284Z [error]: requires property "username"
+2024-02-23T20:52:08.370Z [error]: username does not meet minimum length of 5
+2024-02-23T20:52:08.371Z [error]: password does not meet minimum length of 5
+2024-02-23T20:52:08.586Z [error]: amount must be strictly greater than 0
+2024-02-23T20:52:08.612Z [error]: description does not meet minimum length of 1
+2024-02-23T20:52:08.631Z [error]: amount is not of a type(s) number
+2024-02-23T20:52:08.657Z [error]: requires property "amount",requires property "description"
+2024-02-23T20:56:46.916Z [error]: username does not meet minimum length of 5
+2024-02-23T20:56:46.927Z [error]: password does not meet minimum length of 5
+2024-02-23T20:56:46.929Z [error]: email does not conform to the "email" format
+2024-02-23T20:56:46.930Z [error]: requires property "username"
+2024-02-23T20:56:46.992Z [error]: username does not meet minimum length of 5
+2024-02-23T20:56:46.993Z [error]: password does not meet minimum length of 5
+2024-02-23T20:56:47.184Z [error]: amount must be strictly greater than 0
+2024-02-23T20:56:47.208Z [error]: description does not meet minimum length of 1
+2024-02-23T20:56:47.228Z [error]: amount is not of a type(s) number
+2024-02-23T20:56:47.247Z [error]: requires property "amount",requires property "description"
+2024-02-23T20:59:24.497Z [error]: username does not meet minimum length of 5
+2024-02-23T20:59:24.508Z [error]: password does not meet minimum length of 5
+2024-02-23T20:59:24.509Z [error]: email does not conform to the "email" format
+2024-02-23T20:59:24.510Z [error]: requires property "username"
+2024-02-23T20:59:24.571Z [error]: username does not meet minimum length of 5
+2024-02-23T20:59:24.572Z [error]: password does not meet minimum length of 5
+2024-02-23T20:59:24.669Z [error]: amount must be strictly greater than 0
+2024-02-23T20:59:24.699Z [error]: description does not meet minimum length of 1
+2024-02-23T20:59:24.721Z [error]: amount is not of a type(s) number
+2024-02-23T20:59:24.739Z [error]: requires property "amount",requires property "description"
+2024-02-23T20:59:30.586Z [error]: username does not meet minimum length of 5
+2024-02-23T20:59:30.597Z [error]: password does not meet minimum length of 5
+2024-02-23T20:59:30.598Z [error]: email does not conform to the "email" format
+2024-02-23T20:59:30.600Z [error]: requires property "username"
+2024-02-23T20:59:30.672Z [error]: username does not meet minimum length of 5
+2024-02-23T20:59:30.673Z [error]: password does not meet minimum length of 5
+2024-02-23T20:59:30.732Z [error]: amount must be strictly greater than 0
+2024-02-23T20:59:30.819Z [error]: description does not meet minimum length of 1
+2024-02-23T20:59:30.843Z [error]: amount is not of a type(s) number
+2024-02-23T20:59:30.860Z [error]: requires property "amount",requires property "description"
+2024-02-23T21:01:22.326Z [error]: username does not meet minimum length of 5
+2024-02-23T21:01:22.332Z [error]: password does not meet minimum length of 5
+2024-02-23T21:01:22.333Z [error]: email does not conform to the "email" format
+2024-02-23T21:01:22.334Z [error]: requires property "username"
+2024-02-23T21:01:22.350Z [error]: amount must be strictly greater than 0
+2024-02-23T21:01:22.382Z [error]: description does not meet minimum length of 1
+2024-02-23T21:01:22.404Z [error]: amount is not of a type(s) number
+2024-02-23T21:01:22.423Z [error]: requires property "amount",requires property "description"
+2024-02-23T21:01:22.467Z [error]: username does not meet minimum length of 5
+2024-02-23T21:01:22.468Z [error]: password does not meet minimum length of 5
+2024-02-23T21:02:46.339Z [error]: username does not meet minimum length of 5
+2024-02-23T21:02:46.345Z [error]: password does not meet minimum length of 5
+2024-02-23T21:02:46.346Z [error]: email does not conform to the "email" format
+2024-02-23T21:02:46.347Z [error]: requires property "username"
+2024-02-23T21:02:46.482Z [error]: username does not meet minimum length of 5
+2024-02-23T21:02:46.483Z [error]: password does not meet minimum length of 5
+2024-02-23T21:02:46.486Z [error]: amount must be strictly greater than 0
+2024-02-23T21:02:46.519Z [error]: description does not meet minimum length of 1
+2024-02-23T21:02:46.542Z [error]: amount is not of a type(s) number
+2024-02-23T21:02:46.562Z [error]: requires property "amount",requires property "description"
+2024-02-23T21:04:18.682Z [error]: username does not meet minimum length of 5
+2024-02-23T21:04:18.693Z [error]: password does not meet minimum length of 5
+2024-02-23T21:04:18.694Z [error]: email does not conform to the "email" format
+2024-02-23T21:04:18.695Z [error]: requires property "username"
+2024-02-23T21:04:18.759Z [error]: username does not meet minimum length of 5
+2024-02-23T21:04:18.760Z [error]: password does not meet minimum length of 5
+2024-02-23T21:04:18.857Z [error]: amount must be strictly greater than 0
+2024-02-23T21:04:18.889Z [error]: description does not meet minimum length of 1
+2024-02-23T21:04:18.911Z [error]: amount is not of a type(s) number
+2024-02-23T21:04:18.929Z [error]: requires property "amount",requires property "description"
+2024-02-23T21:06:12.681Z [info]: Incoming POST: /auth/register
+2024-02-23T21:08:17.786Z [info]: Incoming POST: /auth/register
+2024-02-23T21:09:44.274Z [info]: Incoming POST: /auth/register
+2024-02-23T21:09:44.275Z [error]: requires property "name",requires property "email"
+2024-02-23T21:10:17.535Z [info]: Incoming POST: /auth/register
+2024-02-23T21:11:34.907Z [info]: Incoming POST: /auth/register
+2024-02-23T21:12:27.631Z [info]: Incoming POST: /auth/register
+2024-02-23T21:12:38.688Z [info]: Incoming POST: /auth/register
+2024-02-23T21:12:38.689Z [error]: name does not meet minimum length of 1
+2024-02-23T21:12:53.702Z [info]: Incoming POST: /auth/register
+2024-02-23T21:12:53.703Z [error]: name does not meet minimum length of 1,requires property "password"
+2024-02-23T21:13:26.160Z [info]: Incoming POST: /auth/register
+2024-02-23T21:13:26.161Z [error]: name is not of a type(s) string
+2024-02-23T21:14:25.623Z [info]: Incoming POST: /auth/login
+2024-02-23T21:17:03.001Z [info]: Incoming POST: /auth/login
+2024-02-23T21:17:13.323Z [info]: Incoming POST: /auth/login
+2024-02-23T21:17:33.577Z [info]: Incoming POST: /auth/login
+2024-02-23T21:18:15.515Z [info]: Incoming GET: /auth/?username=kevin123
+2024-02-23T21:20:15.005Z [info]: Incoming GET: /auth/?username=kevin1234
+2024-02-23T21:20:18.171Z [info]: Incoming GET: /auth/?username=kevin123
+2024-02-23T21:21:15.773Z [info]: Incoming POST: /tickets
+2024-02-23T21:21:15.774Z [error]: amount is not of a type(s) number,amount does not meet minimum length of 1,description does not meet minimum length of 1
+2024-02-23T21:21:48.584Z [info]: Incoming POST: /tickets
+2024-02-23T21:22:10.347Z [info]: Incoming POST: /tickets
+2024-02-23T21:22:10.347Z [error]: requires property "amount"
+2024-02-23T21:22:27.645Z [info]: Incoming POST: /tickets
+2024-02-23T21:22:27.645Z [error]: amount is not of a type(s) number,amount does not meet minimum length of 1
+2024-02-23T21:22:38.409Z [info]: Incoming POST: /tickets
+2024-02-23T21:26:18.045Z [info]: Incoming POST: /tickets
+2024-02-23T21:28:10.283Z [info]: Incoming POST: /tickets
+2024-02-23T21:29:50.531Z [info]: Incoming POST: /tickets
+2024-02-23T21:30:34.743Z [info]: Incoming POST: /tickets
+2024-02-23T21:30:34.746Z [error]: amount is not of a type(s) number,amount does not meet minimum length of 1
+2024-02-23T21:31:30.383Z [info]: Incoming POST: /tickets
+2024-02-23T21:31:30.385Z [error]: amount is not of a type(s) number,amount does not meet minimum length of 1
+2024-02-23T21:31:52.051Z [info]: Incoming POST: /tickets
+2024-02-23T21:32:05.691Z [info]: Incoming POST: /tickets
+2024-02-23T21:32:05.692Z [error]: amount is not of a type(s) number,amount does not meet minimum length of 1
+2024-02-23T21:32:22.161Z [info]: Incoming POST: /tickets
+2024-02-23T21:32:57.657Z [info]: Incoming POST: /tickets
+2024-02-23T21:32:57.657Z [error]: description is not of a type(s) string
+2024-02-23T21:33:27.267Z [info]: Incoming POST: /tickets
+2024-02-23T21:33:27.268Z [error]: requires property "description"
+2024-02-23T21:33:43.319Z [info]: Incoming POST: /tickets
+2024-02-23T21:34:00.181Z [info]: Incoming POST: /tickets
+2024-02-23T21:35:56.135Z [info]: Incoming POST: /tickets
+2024-02-23T21:36:44.457Z [info]: Incoming POST: /tickets
+2024-02-23T21:37:10.878Z [info]: Incoming POST: /tickets
+2024-02-23T21:38:10.590Z [info]: Incoming GET: /auth/?username=kevin123
+2024-02-23T21:38:59.190Z [info]: Incoming GET: /auth/?username=kevin1234
+2024-02-23T21:39:07.672Z [info]: Incoming GET: /auth/?username=kevin123
+2024-02-23T21:39:46.340Z [info]: Incoming POST: /auth/register
+2024-02-23T21:39:56.524Z [info]: Incoming POST: /auth/login
+2024-02-23T21:40:02.808Z [info]: Incoming POST: /auth/login
+2024-02-23T21:40:38.838Z [info]: Incoming GET: /auth/?username=john123
+2024-02-23T21:40:58.986Z [info]: Incoming GET: /auth/?username=kevin123
+2024-02-23T21:41:59.054Z [info]: Incoming GET: /tickets
+2024-02-23T21:42:30.655Z [info]: Incoming POST: /auth/login
+2024-02-23T21:43:00.607Z [info]: Incoming GET: /tickets
+2024-02-23T21:43:33.636Z [info]: Incoming POST: /tickets
+2024-02-23T21:43:44.336Z [info]: Incoming GET: /tickets
+2024-02-23T21:44:58.653Z [info]: Incoming PUT: /tickets
+2024-02-23T21:45:16.133Z [info]: Incoming PUT: /tickets/0
+2024-02-23T21:46:04.602Z [info]: Incoming PUT: /tickets/0
+2024-02-23T21:46:12.787Z [info]: Incoming PUT: /tickets/0
+2024-02-23T21:46:12.788Z [error]: requires property "username",requires property "status"
+2024-02-23T21:46:23.406Z [info]: Incoming PUT: /tickets/0
+2024-02-23T21:47:02.088Z [info]: Incoming PUT: /tickets/0
+2024-02-23T21:47:28.062Z [info]: Incoming PUT: /tickets/0
+2024-02-23T21:47:28.062Z [error]: status is not one of enum values: Approved,Denied
+2024-02-23T21:47:42.413Z [info]: Incoming PUT: /tickets/0
+2024-02-23T21:47:54.406Z [info]: Incoming PUT: /tickets/0
+2024-02-23T21:48:33.767Z [info]: Incoming PUT: /tickets/2
+2024-02-23T21:48:42.199Z [info]: Incoming PUT: /tickets/0
+2024-02-23T21:48:57.163Z [info]: Incoming PUT: /tickets/1
+2024-02-23T21:49:10.692Z [info]: Incoming PUT: /tickets/2
+2024-02-23T21:49:41.047Z [info]: Incoming GET: /tickets/0
+2024-02-23T21:50:07.127Z [info]: Incoming GET: /tickets/1
+2024-02-23T21:50:09.557Z [info]: Incoming GET: /tickets/2
+2024-02-23T21:50:12.917Z [info]: Incoming GET: /tickets/1
+2024-02-23T21:50:16.666Z [info]: Incoming GET: /tickets/0
+2024-02-23T21:50:30.256Z [info]: Incoming GET: /tickets
+2024-02-23T21:50:37.914Z [info]: Incoming GET: /tickets
+2024-02-23T21:53:17.881Z [info]: Incoming GET: /auth
+2024-02-23T21:53:17.992Z [error]: ExpressionAttributeValues must not be empty
+2024-02-23T21:54:11.576Z [info]: Incoming GET: /auth/?username=kevin123
+2024-02-23T21:57:53.415Z [info]: Incoming GET: /auth/?username=kevin123
+2024-02-23T21:58:59.825Z [info]: Incoming GET: /tickets/0
+2024-02-23T21:59:49.233Z [info]: Incoming PUT: /tickets/0
+2024-02-23T22:00:43.152Z [info]: Incoming DELETE: /auth/delete/kevin123
+2024-02-23T22:00:53.472Z [info]: Incoming DELETE: /auth/delete/kevin123
+2024-02-23T22:01:05.008Z [info]: Incoming GET: /tickets
+2024-02-23T22:01:47.038Z [info]: Incoming GET: /tickets
+2024-02-23T22:03:07.885Z [info]: Incoming GET: /tickets

@@ -100,9 +100,28 @@ const changeStatus = async (employee_id, ticket_id, status) => {
     }
 };
 
+const allEmployeeTickets = async (role) => {
+    const command = new QueryCommand({
+        TableName,
+        IndexName: "role-index",
+        KeyConditionExpression: "#r = :r",
+        ExpressionAttributeNames: { "#r": "role" },
+        ExpressionAttributeValues: { ":r": role }
+    });
+
+    try {
+        const data = await documentClient.send(command);
+        return data.Items;
+    } catch (error) {
+        logger.error(error);
+        return null;
+    }
+};
+
 
 module.exports = {
     viewTickets,
     createTicket,
-    changeStatus
+    changeStatus,
+    allEmployeeTickets
 }

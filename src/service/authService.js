@@ -90,6 +90,11 @@ const getUserByUsername = async (username) => {
     return (data) ? data : null;
 }
 
+const getUserById = async (employee_id) => {
+    const data = await userDAO.getUserById(employee_id);
+    return (data) ? data : null;
+}
+
 const deleteUser = async (username) => {
     const user = await getUserByUsername(username);
     if (user) {
@@ -102,6 +107,7 @@ const deleteUser = async (username) => {
 module.exports = {
     getAllItem,
     getUserByUsername,
+    getUserById,
     registerUser,
     loginUser,
     deleteUser

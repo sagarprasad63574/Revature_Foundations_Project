@@ -68,6 +68,23 @@ const getUserByUsername = async (username) => {
     }
 };
 
+const getUserById = async (employee_id) => {
+    const command = new GetCommand({
+        TableName,
+        Key: {
+            employee_id
+        }
+    });
+
+    try {
+        const data = await documentClient.send(command);
+        return data.Item;
+    } catch (error) {
+        logger.error(error);
+        return null;
+    }
+};
+
 const deleteUser = async (employee_id) => {
     const command = new DeleteCommand({
         TableName,
@@ -83,6 +100,7 @@ const deleteUser = async (employee_id) => {
 module.exports = {
     getAllItems,
     getUserByUsername,
+    getUserById,
     createUser,
     deleteUser
 }
