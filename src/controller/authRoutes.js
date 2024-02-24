@@ -15,8 +15,12 @@ const { ensureLoggedIn, ensureAdmin } = require('../middleware/auth');
 // });
 
 router.get('/', ensureLoggedIn, async (req, res) => {
+    const currentUser = res.locals.user.username; 
     const username = req.query.username;
     try {
+        const validUser = await authService.validCurrentUser(currentUser, username);
+        if (!validUser) return res.status(403).json({ message: "Access denied!"});
+
         const user = await authService.getUserByUsername(username);
         if (user) {
             return res.status(200).json({

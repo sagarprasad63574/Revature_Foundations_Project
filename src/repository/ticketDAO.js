@@ -75,18 +75,20 @@ const createTicket = async (employee_id, ticket) => {
     }
 }
 
-const changeStatus = async (employee_id, ticket_id, status) => {
+const changeStatus = async (employee_id, ticket_id, status, manager_id) => {
     const command = new UpdateCommand({
         TableName,
         Key: {
             employee_id
         },
-        UpdateExpression: `SET tickets[${ticket_id}].#s = :vals`,
+        UpdateExpression: `SET tickets[${ticket_id}].#s = :vals, tickets[${ticket_id}].#m = :id`,
         ExpressionAttributeNames: {
+            "#m": "manager_id",
             "#s": "status"
         },
         ExpressionAttributeValues: {
-            ":vals": status
+            ":vals": status,
+            ":id": manager_id
         },
         ReturnValues: "UPDATED_NEW",
     });

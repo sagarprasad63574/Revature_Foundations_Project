@@ -8,16 +8,16 @@ const ticketStatusSchema = require('../schemas/ticketStatusSchema.json');
 const roleSchema = require('../schemas/roleSchema.json');
 const logger = require('../util/logger');
 
-const viewMyTickets = async (employee_id) => {
+// const viewMyTickets = async (employee_id) => {
 
-    const tickets = await ticketDAO.viewTickets(employee_id);
+//     const tickets = await ticketDAO.viewTickets(employee_id);
 
-    if (tickets.length) {
-        return { response: true, tickets };
-    }
+//     if (tickets.length) {
+//         return { response: true, tickets };
+//     }
 
-    return { response: false, tickets }
-}
+//     return { response: false, tickets }
+// }
 
 const viewTicket = async (employee_id, ticket_id) => {
     let { response, errors } = validateViewTicket({ ticket_id });
@@ -42,15 +42,15 @@ function validateViewTicket(receivedData) {
     return { response: true };
 }
 
-const viewEmployeeTickets = async (employee_id, role) => {
-    let { response, errors } = validateRole({ role });
+const viewEmployeeTickets = async (employee_id, role, status) => {
+    let { response, errors } = validateRole({ role, status });
     if (!response) return { response: false, errors: errors }
 
     const employees = await ticketDAO.allEmployeeTickets("employee");
     const tickets = getAllTickets(employee_id, employees);
 
-    if (tickets.length) return { response: true, tickets };
-    return { response: false }
+    if (tickets.length) return { response: true, message: "Pending tickets",  tickets };
+    return { response: false, message: "No tickets found!"}
 }
 
 function validateRole(receivedData) {
@@ -104,7 +104,9 @@ const addTicket = async (employee_id, receivedData) => {
     if (data) {
         let index = data.length-1; 
         let ticket = data[index];
-        return { response: true, ticket, index, user };
+        if (index >= 0) ticket.index = index;
+
+        return { response: true, ticket, user };
     }
 
     return { response: false };
@@ -121,7 +123,7 @@ function validateTicket(receivedData) {
     return { response: true };
 }
 
-const updateStatus = async (ticket_id, receivedDatadata) => {
+const updateStatus = async (ticket_id, manager_id, receivedDatadata) => {
 
     let { response, errors } = validateStatus({ ticket_id, ...receivedDatadata });
     if (!response) return { response: false, errors: errors }
@@ -135,11 +137,11 @@ const updateStatus = async (ticket_id, receivedDatadata) => {
 
     if (!isStatusChanged) return { response: false, errors: "Ticket was already processed!" }
 
-    let ticketStatus = await ticketDAO.changeStatus(user.employee_id, ticket_id, receivedDatadata.status);
-
+    let ticketStatus = await ticketDAO.changeStatus(user.employee_id, ticket_id, receivedDatadata.status, manager_id);
+    
     if (ticketStatus) {
         const ticket = user.tickets[ticket_id];
-        return { response: true, user, ticket, status: ticketStatus.status };
+        return { response: true, user, ticket, status: ticketStatus.status, manager: ticketStatus.manager_id};
     }
 
     return { response: false };
@@ -162,7 +164,6 @@ function statusChanged(tickets, ticket_id) {
 }
 
 module.exports = {
-    viewMyTickets,
     viewTicket,
     viewEmployeeTickets,
     addTicket,

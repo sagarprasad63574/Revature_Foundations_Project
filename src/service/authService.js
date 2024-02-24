@@ -85,6 +85,10 @@ function validateLogin(receivedData) {
 
 }
 
+const validCurrentUser = async (currentUser, username) => {
+    return (currentUser === username) ? true : false; 
+}
+
 const getUserByUsername = async (username) => {
     const data = await userDAO.getUserByUsername(username);
     return (data) ? data : null;
@@ -108,6 +112,7 @@ module.exports = {
     getAllItem,
     getUserByUsername,
     getUserById,
+    validCurrentUser,
     registerUser,
     loginUser,
     deleteUser

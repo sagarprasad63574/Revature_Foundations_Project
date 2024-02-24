@@ -5,14 +5,16 @@
     "properties": {
         "role": {
             "type": "string",
-            "enum": [
-                "employee",
-                "manager"
-            ]
+            "const": "manager"
+        },
+        "status": {
+            "type": "string",
+            "const": "Pending"
         }
     },
     "additionalProperties": false,
     "required": [
-        "role"
+        "role",
+        "status"
     ]
 }

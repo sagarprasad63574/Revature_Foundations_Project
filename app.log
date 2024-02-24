@@ -947,3 +947,627 @@
 2024-02-23T22:01:05.008Z [info]: Incoming GET: /tickets
 2024-02-23T22:01:47.038Z [info]: Incoming GET: /tickets
 2024-02-23T22:03:07.885Z [info]: Incoming GET: /tickets
+2024-02-24T18:33:33.202Z [info]: Incoming POST: /auth/register
+2024-02-24T18:34:56.407Z [info]: Incoming POST: /auth/login
+2024-02-24T18:35:14.838Z [info]: Incoming GET: /tickets
+2024-02-24T18:35:53.254Z [info]: Incoming POST: /auth/login
+2024-02-24T18:36:38.300Z [info]: Incoming POST: /auth/login
+2024-02-24T18:37:38.290Z [info]: Incoming POST: /tickets
+2024-02-24T18:38:05.455Z [info]: Incoming GET: /tickets
+2024-02-24T18:38:50.498Z [info]: Incoming PUT: /tickets/0
+2024-02-24T18:39:05.337Z [info]: Incoming PUT: /tickets/0
+2024-02-24T18:39:32.797Z [info]: Incoming GET: /auth/?username=kevin123
+2024-02-24T18:39:37.965Z [info]: Incoming GET: /auth/?username=jon123
+2024-02-24T18:49:27.952Z [info]: Incoming GET: /auth/?username=jon123
+2024-02-24T18:55:18.865Z [info]: Incoming GET: /auth/?username=jon123
+2024-02-24T18:56:31.335Z [info]: Incoming GET: /auth/?username=jon123
+2024-02-24T18:57:14.633Z [info]: Incoming GET: /auth/?username=jon123
+2024-02-24T18:57:24.824Z [info]: Incoming GET: /auth/?username=jon1234
+2024-02-24T18:57:48.487Z [info]: Incoming GET: /auth/?username=jon1234
+2024-02-24T18:57:51.203Z [info]: Incoming GET: /auth/?username=jon1234
+2024-02-24T18:57:55.196Z [info]: Incoming GET: /auth/?username=jon1234
+2024-02-24T18:58:00.783Z [info]: Incoming GET: /auth/?username=jon123
+2024-02-24T19:05:18.691Z [info]: Incoming GET: /tickets
+2024-02-24T19:05:48.951Z [info]: Incoming POST: /tickets
+2024-02-24T19:06:01.118Z [info]: Incoming GET: /tickets
+2024-02-24T19:06:16.858Z [info]: Incoming PUT: /tickets/0
+2024-02-24T19:06:23.257Z [info]: Incoming PUT: /tickets/1
+2024-02-24T19:08:01.374Z [info]: Incoming PUT: /tickets/1
+2024-02-24T19:08:04.996Z [info]: Incoming GET: /auth/?username=jon123
+2024-02-24T19:15:46.232Z [info]: Incoming GET: /tickets
+2024-02-24T19:15:57.852Z [info]: Incoming POST: /tickets
+2024-02-24T19:16:02.301Z [info]: Incoming GET: /tickets
+2024-02-24T19:16:35.358Z [info]: Incoming PUT: /tickets/2
+2024-02-24T19:19:51.431Z [info]: Incoming POST: /tickets
+2024-02-24T19:20:00.493Z [info]: Incoming PUT: /tickets/2
+2024-02-24T19:20:03.296Z [info]: Incoming PUT: /tickets/3
+2024-02-24T19:23:36.188Z [info]: Incoming POST: /tickets
+2024-02-24T19:23:42.422Z [info]: Incoming GET: /tickets
+2024-02-24T19:23:52.183Z [info]: Incoming PUT: /tickets/4
+2024-02-24T19:26:04.393Z [info]: Incoming GET: /tickets
+2024-02-24T19:26:16.385Z [info]: Incoming POST: /tickets
+2024-02-24T19:26:32.377Z [info]: Incoming PUT: /tickets/3
+2024-02-24T19:26:35.547Z [info]: Incoming PUT: /tickets/5
+2024-02-24T19:27:01.336Z [info]: Incoming POST: /tickets
+2024-02-24T19:27:05.814Z [info]: Incoming GET: /tickets
+2024-02-24T19:27:12.076Z [info]: Incoming PUT: /tickets/6
+2024-02-24T19:29:18.657Z [info]: Incoming POST: /tickets
+2024-02-24T19:29:23.461Z [info]: Incoming GET: /tickets
+2024-02-24T19:29:28.289Z [info]: Incoming PUT: /tickets/7
+2024-02-24T19:29:33.518Z [info]: Incoming GET: /auth/?username=jon123
+2024-02-24T19:29:48.599Z [info]: Incoming POST: /tickets
+2024-02-24T19:29:50.814Z [info]: Incoming GET: /auth/?username=jon123
+2024-02-24T19:30:08.820Z [info]: Incoming PUT: /tickets/7
+2024-02-24T19:30:12.646Z [info]: Incoming PUT: /tickets/8
+2024-02-24T19:30:16.866Z [info]: Incoming GET: /auth/?username=jon123
+2024-02-24T19:31:09.886Z [error]: username does not meet minimum length of 5
+2024-02-24T19:31:09.891Z [error]: password does not meet minimum length of 5
+2024-02-24T19:31:09.892Z [error]: email does not conform to the "email" format
+2024-02-24T19:31:09.893Z [error]: requires property "username"
+2024-02-24T19:31:09.955Z [error]: username does not meet minimum length of 5
+2024-02-24T19:31:09.956Z [error]: password does not meet minimum length of 5
+2024-02-24T19:31:10.065Z [error]: amount must be strictly greater than 0
+2024-02-24T19:31:10.090Z [error]: description does not meet minimum length of 1
+2024-02-24T19:31:10.108Z [error]: amount is not of a type(s) number
+2024-02-24T19:31:10.125Z [error]: requires property "amount",requires property "description"
+2024-02-24T19:34:28.190Z [error]: username does not meet minimum length of 5
+2024-02-24T19:34:28.201Z [error]: password does not meet minimum length of 5
+2024-02-24T19:34:28.202Z [error]: email does not conform to the "email" format
+2024-02-24T19:34:28.203Z [error]: requires property "username"
+2024-02-24T19:34:28.264Z [error]: username does not meet minimum length of 5
+2024-02-24T19:34:28.265Z [error]: password does not meet minimum length of 5
+2024-02-24T19:34:28.424Z [error]: amount must be strictly greater than 0
+2024-02-24T19:34:28.453Z [error]: description does not meet minimum length of 1
+2024-02-24T19:34:28.473Z [error]: amount is not of a type(s) number
+2024-02-24T19:34:28.490Z [error]: requires property "amount",requires property "description"
+2024-02-24T19:35:15.026Z [info]: Incoming POST: /tickets
+2024-02-24T19:37:31.362Z [info]: Incoming POST: /auth/login
+2024-02-24T19:37:46.874Z [info]: Incoming POST: /tickets
+2024-02-24T19:38:01.940Z [error]: username does not meet minimum length of 5
+2024-02-24T19:38:01.950Z [error]: password does not meet minimum length of 5
+2024-02-24T19:38:01.952Z [error]: email does not conform to the "email" format
+2024-02-24T19:38:01.953Z [error]: requires property "username"
+2024-02-24T19:38:02.015Z [error]: username does not meet minimum length of 5
+2024-02-24T19:38:02.016Z [error]: password does not meet minimum length of 5
+2024-02-24T19:38:02.187Z [error]: amount must be strictly greater than 0
+2024-02-24T19:38:02.213Z [error]: description does not meet minimum length of 1
+2024-02-24T19:38:02.231Z [error]: amount is not of a type(s) number
+2024-02-24T19:38:02.250Z [error]: requires property "amount",requires property "description"
+2024-02-24T19:38:07.102Z [error]: username does not meet minimum length of 5
+2024-02-24T19:38:07.113Z [error]: password does not meet minimum length of 5
+2024-02-24T19:38:07.114Z [error]: email does not conform to the "email" format
+2024-02-24T19:38:07.115Z [error]: requires property "username"
+2024-02-24T19:38:07.176Z [error]: username does not meet minimum length of 5
+2024-02-24T19:38:07.177Z [error]: password does not meet minimum length of 5
+2024-02-24T19:38:07.253Z [error]: amount must be strictly greater than 0
+2024-02-24T19:38:07.284Z [error]: description does not meet minimum length of 1
+2024-02-24T19:38:07.305Z [error]: amount is not of a type(s) number
+2024-02-24T19:38:07.324Z [error]: requires property "amount",requires property "description"
+2024-02-24T19:38:12.097Z [error]: username does not meet minimum length of 5
+2024-02-24T19:38:12.108Z [error]: password does not meet minimum length of 5
+2024-02-24T19:38:12.109Z [error]: email does not conform to the "email" format
+2024-02-24T19:38:12.110Z [error]: requires property "username"
+2024-02-24T19:38:12.178Z [error]: username does not meet minimum length of 5
+2024-02-24T19:38:12.179Z [error]: password does not meet minimum length of 5
+2024-02-24T19:38:12.215Z [error]: amount must be strictly greater than 0
+2024-02-24T19:38:12.248Z [error]: description does not meet minimum length of 1
+2024-02-24T19:38:12.276Z [error]: amount is not of a type(s) number
+2024-02-24T19:38:12.293Z [error]: requires property "amount",requires property "description"
+2024-02-24T19:46:28.989Z [error]: username does not meet minimum length of 5
+2024-02-24T19:46:29.000Z [error]: password does not meet minimum length of 5
+2024-02-24T19:46:29.001Z [error]: email does not conform to the "email" format
+2024-02-24T19:46:29.002Z [error]: requires property "username"
+2024-02-24T19:46:29.069Z [error]: username does not meet minimum length of 5
+2024-02-24T19:46:29.070Z [error]: password does not meet minimum length of 5
+2024-02-24T19:46:29.390Z [error]: amount must be strictly greater than 0
+2024-02-24T19:46:29.416Z [error]: description does not meet minimum length of 1
+2024-02-24T19:46:29.437Z [error]: amount is not of a type(s) number
+2024-02-24T19:46:29.456Z [error]: requires property "amount",requires property "description"
+2024-02-24T19:51:25.693Z [error]: username does not meet minimum length of 5
+2024-02-24T19:51:25.703Z [error]: password does not meet minimum length of 5
+2024-02-24T19:51:25.705Z [error]: email does not conform to the "email" format
+2024-02-24T19:51:25.706Z [error]: requires property "username"
+2024-02-24T19:51:25.770Z [error]: username does not meet minimum length of 5
+2024-02-24T19:51:25.771Z [error]: password does not meet minimum length of 5
+2024-02-24T19:51:25.941Z [error]: amount must be strictly greater than 0
+2024-02-24T19:51:25.968Z [error]: description does not meet minimum length of 1
+2024-02-24T19:51:25.990Z [error]: amount is not of a type(s) number
+2024-02-24T19:51:26.007Z [error]: requires property "amount",requires property "description"
+2024-02-24T19:53:36.940Z [error]: username does not meet minimum length of 5
+2024-02-24T19:53:36.951Z [error]: password does not meet minimum length of 5
+2024-02-24T19:53:36.952Z [error]: email does not conform to the "email" format
+2024-02-24T19:53:36.953Z [error]: requires property "username"
+2024-02-24T19:53:37.013Z [error]: username does not meet minimum length of 5
+2024-02-24T19:53:37.014Z [error]: password does not meet minimum length of 5
+2024-02-24T19:53:37.147Z [error]: amount must be strictly greater than 0
+2024-02-24T19:53:37.172Z [error]: description does not meet minimum length of 1
+2024-02-24T19:53:37.192Z [error]: amount is not of a type(s) number
+2024-02-24T19:53:37.210Z [error]: requires property "amount",requires property "description"
+2024-02-24T19:56:55.277Z [error]: username does not meet minimum length of 5
+2024-02-24T19:56:55.287Z [error]: password does not meet minimum length of 5
+2024-02-24T19:56:55.288Z [error]: email does not conform to the "email" format
+2024-02-24T19:56:55.289Z [error]: requires property "username"
+2024-02-24T19:56:55.359Z [error]: username does not meet minimum length of 5
+2024-02-24T19:56:55.360Z [error]: password does not meet minimum length of 5
+2024-02-24T19:56:55.526Z [error]: amount must be strictly greater than 0
+2024-02-24T19:56:55.549Z [error]: description does not meet minimum length of 1
+2024-02-24T19:56:55.567Z [error]: amount is not of a type(s) number
+2024-02-24T19:56:55.585Z [error]: requires property "amount",requires property "description"
+2024-02-24T19:57:19.422Z [error]: username does not meet minimum length of 5
+2024-02-24T19:57:19.433Z [error]: password does not meet minimum length of 5
+2024-02-24T19:57:19.434Z [error]: email does not conform to the "email" format
+2024-02-24T19:57:19.435Z [error]: requires property "username"
+2024-02-24T19:57:19.493Z [error]: username does not meet minimum length of 5
+2024-02-24T19:57:19.494Z [error]: password does not meet minimum length of 5
+2024-02-24T19:57:19.678Z [error]: amount must be strictly greater than 0
+2024-02-24T19:57:19.700Z [error]: description does not meet minimum length of 1
+2024-02-24T19:57:19.718Z [error]: amount is not of a type(s) number
+2024-02-24T19:57:19.735Z [error]: requires property "amount",requires property "description"
+2024-02-24T19:57:24.061Z [error]: username does not meet minimum length of 5
+2024-02-24T19:57:24.071Z [error]: password does not meet minimum length of 5
+2024-02-24T19:57:24.072Z [error]: email does not conform to the "email" format
+2024-02-24T19:57:24.073Z [error]: requires property "username"
+2024-02-24T19:57:24.205Z [error]: username does not meet minimum length of 5
+2024-02-24T19:57:24.199Z [error]: amount must be strictly greater than 0
+2024-02-24T19:57:24.206Z [error]: password does not meet minimum length of 5
+2024-02-24T19:57:24.234Z [error]: description does not meet minimum length of 1
+2024-02-24T19:57:24.253Z [error]: amount is not of a type(s) number
+2024-02-24T19:57:24.301Z [error]: requires property "amount",requires property "description"
+2024-02-24T19:58:14.516Z [error]: username does not meet minimum length of 5
+2024-02-24T19:58:14.526Z [error]: password does not meet minimum length of 5
+2024-02-24T19:58:14.527Z [error]: email does not conform to the "email" format
+2024-02-24T19:58:14.529Z [error]: requires property "username"
+2024-02-24T19:58:14.591Z [error]: username does not meet minimum length of 5
+2024-02-24T19:58:14.592Z [error]: password does not meet minimum length of 5
+2024-02-24T19:58:14.676Z [error]: amount must be strictly greater than 0
+2024-02-24T19:58:14.711Z [error]: description does not meet minimum length of 1
+2024-02-24T19:58:14.731Z [error]: amount is not of a type(s) number
+2024-02-24T19:58:14.756Z [error]: requires property "amount",requires property "description"
+2024-02-24T19:59:06.999Z [error]: username does not meet minimum length of 5
+2024-02-24T19:59:07.009Z [error]: password does not meet minimum length of 5
+2024-02-24T19:59:07.011Z [error]: email does not conform to the "email" format
+2024-02-24T19:59:07.012Z [error]: requires property "username"
+2024-02-24T19:59:07.071Z [error]: username does not meet minimum length of 5
+2024-02-24T19:59:07.072Z [error]: password does not meet minimum length of 5
+2024-02-24T19:59:07.132Z [error]: amount must be strictly greater than 0
+2024-02-24T19:59:07.160Z [error]: description does not meet minimum length of 1
+2024-02-24T19:59:07.183Z [error]: amount is not of a type(s) number
+2024-02-24T19:59:07.201Z [error]: requires property "amount",requires property "description"
+2024-02-24T20:05:44.696Z [error]: username does not meet minimum length of 5
+2024-02-24T20:05:44.707Z [error]: password does not meet minimum length of 5
+2024-02-24T20:05:44.709Z [error]: email does not conform to the "email" format
+2024-02-24T20:05:44.710Z [error]: requires property "username"
+2024-02-24T20:05:44.776Z [error]: username does not meet minimum length of 5
+2024-02-24T20:05:44.777Z [error]: password does not meet minimum length of 5
+2024-02-24T20:05:44.994Z [error]: amount must be strictly greater than 0
+2024-02-24T20:05:45.016Z [error]: description does not meet minimum length of 1
+2024-02-24T20:05:45.041Z [error]: amount is not of a type(s) number
+2024-02-24T20:05:45.060Z [error]: requires property "amount",requires property "description"
+2024-02-24T20:07:38.736Z [error]: username does not meet minimum length of 5
+2024-02-24T20:07:38.747Z [error]: password does not meet minimum length of 5
+2024-02-24T20:07:38.748Z [error]: email does not conform to the "email" format
+2024-02-24T20:07:38.749Z [error]: requires property "username"
+2024-02-24T20:07:38.810Z [error]: username does not meet minimum length of 5
+2024-02-24T20:07:38.811Z [error]: password does not meet minimum length of 5
+2024-02-24T20:07:38.993Z [error]: amount must be strictly greater than 0
+2024-02-24T20:07:39.021Z [error]: description does not meet minimum length of 1
+2024-02-24T20:07:39.041Z [error]: amount is not of a type(s) number
+2024-02-24T20:07:39.059Z [error]: requires property "amount",requires property "description"
+2024-02-24T20:09:50.293Z [error]: username does not meet minimum length of 5
+2024-02-24T20:09:50.304Z [error]: password does not meet minimum length of 5
+2024-02-24T20:09:50.306Z [error]: email does not conform to the "email" format
+2024-02-24T20:09:50.307Z [error]: requires property "username"
+2024-02-24T20:09:50.366Z [error]: username does not meet minimum length of 5
+2024-02-24T20:09:50.367Z [error]: password does not meet minimum length of 5
+2024-02-24T20:09:50.527Z [error]: amount must be strictly greater than 0
+2024-02-24T20:09:50.549Z [error]: description does not meet minimum length of 1
+2024-02-24T20:09:50.568Z [error]: amount is not of a type(s) number
+2024-02-24T20:09:50.586Z [error]: requires property "amount",requires property "description"
+2024-02-24T20:10:42.193Z [error]: username does not meet minimum length of 5
+2024-02-24T20:10:42.203Z [error]: password does not meet minimum length of 5
+2024-02-24T20:10:42.204Z [error]: email does not conform to the "email" format
+2024-02-24T20:10:42.206Z [error]: requires property "username"
+2024-02-24T20:10:42.273Z [error]: username does not meet minimum length of 5
+2024-02-24T20:10:42.274Z [error]: password does not meet minimum length of 5
+2024-02-24T20:10:42.404Z [error]: amount must be strictly greater than 0
+2024-02-24T20:10:42.433Z [error]: description does not meet minimum length of 1
+2024-02-24T20:10:42.453Z [error]: amount is not of a type(s) number
+2024-02-24T20:10:42.472Z [error]: requires property "amount",requires property "description"
+2024-02-24T20:10:42.564Z [error]: ticket_id is not of a type(s) number
+2024-02-24T20:11:13.908Z [error]: username does not meet minimum length of 5
+2024-02-24T20:11:13.918Z [error]: password does not meet minimum length of 5
+2024-02-24T20:11:13.919Z [error]: email does not conform to the "email" format
+2024-02-24T20:11:13.920Z [error]: requires property "username"
+2024-02-24T20:11:13.984Z [error]: username does not meet minimum length of 5
+2024-02-24T20:11:13.985Z [error]: password does not meet minimum length of 5
+2024-02-24T20:11:14.188Z [error]: amount must be strictly greater than 0
+2024-02-24T20:11:14.213Z [error]: description does not meet minimum length of 1
+2024-02-24T20:11:14.232Z [error]: amount is not of a type(s) number
+2024-02-24T20:11:14.249Z [error]: requires property "amount",requires property "description"
+2024-02-24T20:11:14.339Z [error]: ticket_id is not of a type(s) number
+2024-02-24T20:28:26.026Z [error]: username does not meet minimum length of 5
+2024-02-24T20:28:26.037Z [error]: password does not meet minimum length of 5
+2024-02-24T20:28:26.038Z [error]: email does not conform to the "email" format
+2024-02-24T20:28:26.040Z [error]: requires property "username"
+2024-02-24T20:28:26.109Z [error]: username does not meet minimum length of 5
+2024-02-24T20:28:26.110Z [error]: password does not meet minimum length of 5
+2024-02-24T20:28:26.312Z [error]: amount must be strictly greater than 0
+2024-02-24T20:28:26.337Z [error]: description does not meet minimum length of 1
+2024-02-24T20:28:26.360Z [error]: amount is not of a type(s) number
+2024-02-24T20:28:26.378Z [error]: requires property "amount",requires property "description"
+2024-02-24T20:28:26.479Z [error]: ticket_id is not of a type(s) number
+2024-02-24T20:30:14.479Z [error]: username does not meet minimum length of 5
+2024-02-24T20:30:14.490Z [error]: password does not meet minimum length of 5
+2024-02-24T20:30:14.491Z [error]: email does not conform to the "email" format
+2024-02-24T20:30:14.492Z [error]: requires property "username"
+2024-02-24T20:30:14.549Z [error]: username does not meet minimum length of 5
+2024-02-24T20:30:14.550Z [error]: password does not meet minimum length of 5
+2024-02-24T20:30:14.767Z [error]: amount must be strictly greater than 0
+2024-02-24T20:30:14.791Z [error]: description does not meet minimum length of 1
+2024-02-24T20:30:14.809Z [error]: amount is not of a type(s) number
+2024-02-24T20:30:14.827Z [error]: requires property "amount",requires property "description"
+2024-02-24T20:30:14.919Z [error]: ticket_id is not of a type(s) number
+2024-02-24T20:30:37.761Z [error]: username does not meet minimum length of 5
+2024-02-24T20:30:37.772Z [error]: password does not meet minimum length of 5
+2024-02-24T20:30:37.773Z [error]: email does not conform to the "email" format
+2024-02-24T20:30:37.774Z [error]: requires property "username"
+2024-02-24T20:30:37.834Z [error]: username does not meet minimum length of 5
+2024-02-24T20:30:37.835Z [error]: password does not meet minimum length of 5
+2024-02-24T20:30:37.986Z [error]: amount must be strictly greater than 0
+2024-02-24T20:30:38.010Z [error]: description does not meet minimum length of 1
+2024-02-24T20:30:38.028Z [error]: amount is not of a type(s) number
+2024-02-24T20:30:38.046Z [error]: requires property "amount",requires property "description"
+2024-02-24T20:30:38.139Z [error]: ticket_id is not of a type(s) number
+2024-02-24T20:33:55.754Z [error]: username does not meet minimum length of 5
+2024-02-24T20:33:55.765Z [error]: password does not meet minimum length of 5
+2024-02-24T20:33:55.766Z [error]: email does not conform to the "email" format
+2024-02-24T20:33:55.767Z [error]: requires property "username"
+2024-02-24T20:33:55.837Z [error]: username does not meet minimum length of 5
+2024-02-24T20:33:55.838Z [error]: password does not meet minimum length of 5
+2024-02-24T20:33:56.032Z [error]: amount must be strictly greater than 0
+2024-02-24T20:33:56.056Z [error]: description does not meet minimum length of 1
+2024-02-24T20:33:56.077Z [error]: amount is not of a type(s) number
+2024-02-24T20:33:56.096Z [error]: requires property "amount",requires property "description"
+2024-02-24T20:33:56.185Z [error]: ticket_id is not of a type(s) number
+2024-02-24T20:36:47.531Z [error]: username does not meet minimum length of 5
+2024-02-24T20:36:47.541Z [error]: password does not meet minimum length of 5
+2024-02-24T20:36:47.542Z [error]: email does not conform to the "email" format
+2024-02-24T20:36:47.544Z [error]: requires property "username"
+2024-02-24T20:36:47.605Z [error]: username does not meet minimum length of 5
+2024-02-24T20:36:47.606Z [error]: password does not meet minimum length of 5
+2024-02-24T20:36:47.692Z [error]: amount must be strictly greater than 0
+2024-02-24T20:36:47.716Z [error]: description does not meet minimum length of 1
+2024-02-24T20:36:47.734Z [error]: amount is not of a type(s) number
+2024-02-24T20:36:47.752Z [error]: requires property "amount",requires property "description"
+2024-02-24T20:36:47.841Z [error]: ticket_id is not of a type(s) number
+2024-02-24T20:36:47.858Z [error]: role does not exactly match expected constant: manager
+2024-02-24T20:37:41.483Z [error]: username does not meet minimum length of 5
+2024-02-24T20:37:41.494Z [error]: password does not meet minimum length of 5
+2024-02-24T20:37:41.495Z [error]: email does not conform to the "email" format
+2024-02-24T20:37:41.496Z [error]: requires property "username"
+2024-02-24T20:37:41.559Z [error]: username does not meet minimum length of 5
+2024-02-24T20:37:41.560Z [error]: password does not meet minimum length of 5
+2024-02-24T20:37:41.738Z [error]: amount must be strictly greater than 0
+2024-02-24T20:37:41.786Z [error]: description does not meet minimum length of 1
+2024-02-24T20:37:41.815Z [error]: amount is not of a type(s) number
+2024-02-24T20:37:41.832Z [error]: requires property "amount",requires property "description"
+2024-02-24T20:37:41.922Z [error]: ticket_id is not of a type(s) number
+2024-02-24T20:37:41.938Z [error]: role does not exactly match expected constant: manager
+2024-02-24T20:38:49.602Z [error]: username does not meet minimum length of 5
+2024-02-24T20:38:49.613Z [error]: password does not meet minimum length of 5
+2024-02-24T20:38:49.615Z [error]: email does not conform to the "email" format
+2024-02-24T20:38:49.616Z [error]: requires property "username"
+2024-02-24T20:38:49.678Z [error]: username does not meet minimum length of 5
+2024-02-24T20:38:49.679Z [error]: password does not meet minimum length of 5
+2024-02-24T20:38:49.868Z [error]: amount must be strictly greater than 0
+2024-02-24T20:38:49.892Z [error]: description does not meet minimum length of 1
+2024-02-24T20:38:49.911Z [error]: amount is not of a type(s) number
+2024-02-24T20:38:49.930Z [error]: requires property "amount",requires property "description"
+2024-02-24T20:38:50.025Z [error]: ticket_id is not of a type(s) number
+2024-02-24T20:38:50.050Z [error]: role does not exactly match expected constant: manager
+2024-02-24T20:38:50.069Z [error]: role does not exactly match expected constant: manager,status does not exactly match expected constant: Pending
+2024-02-24T20:39:18.018Z [error]: username does not meet minimum length of 5
+2024-02-24T20:39:18.028Z [error]: password does not meet minimum length of 5
+2024-02-24T20:39:18.029Z [error]: email does not conform to the "email" format
+2024-02-24T20:39:18.030Z [error]: requires property "username"
+2024-02-24T20:39:18.099Z [error]: username does not meet minimum length of 5
+2024-02-24T20:39:18.100Z [error]: password does not meet minimum length of 5
+2024-02-24T20:39:18.278Z [error]: amount must be strictly greater than 0
+2024-02-24T20:39:18.302Z [error]: description does not meet minimum length of 1
+2024-02-24T20:39:18.320Z [error]: amount is not of a type(s) number
+2024-02-24T20:39:18.338Z [error]: requires property "amount",requires property "description"
+2024-02-24T20:39:18.433Z [error]: ticket_id is not of a type(s) number
+2024-02-24T20:39:18.451Z [error]: role does not exactly match expected constant: manager
+2024-02-24T20:39:18.468Z [error]: status does not exactly match expected constant: Pending
+2024-02-24T20:39:28.501Z [error]: username does not meet minimum length of 5
+2024-02-24T20:39:28.512Z [error]: password does not meet minimum length of 5
+2024-02-24T20:39:28.513Z [error]: email does not conform to the "email" format
+2024-02-24T20:39:28.514Z [error]: requires property "username"
+2024-02-24T20:39:28.582Z [error]: username does not meet minimum length of 5
+2024-02-24T20:39:28.583Z [error]: password does not meet minimum length of 5
+2024-02-24T20:39:28.632Z [error]: amount must be strictly greater than 0
+2024-02-24T20:39:28.664Z [error]: description does not meet minimum length of 1
+2024-02-24T20:39:28.684Z [error]: amount is not of a type(s) number
+2024-02-24T20:39:28.703Z [error]: requires property "amount",requires property "description"
+2024-02-24T20:39:28.794Z [error]: ticket_id is not of a type(s) number
+2024-02-24T20:39:28.812Z [error]: role does not exactly match expected constant: manager
+2024-02-24T20:39:28.829Z [error]: status does not exactly match expected constant: Pending
+2024-02-24T20:39:54.148Z [info]: Incoming POST: /auth/login
+2024-02-24T20:40:06.283Z [info]: Incoming GET: /tickets
+2024-02-24T20:40:06.283Z [error]: requires property "status"
+2024-02-24T20:41:31.231Z [info]: Incoming GET: /tickets
+2024-02-24T20:41:31.234Z [error]: requires property "status"
+2024-02-24T20:41:44.749Z [info]: Incoming GET: /tickets?status=%22Pending%22
+2024-02-24T20:41:44.749Z [error]: status does not exactly match expected constant: Pending
+2024-02-24T20:41:51.958Z [info]: Incoming GET: /tickets?status=Pending
+2024-02-24T20:42:14.346Z [info]: Incoming POST: /auth/login
+2024-02-24T20:42:23.066Z [info]: Incoming GET: /auth/?username=jon123
+2024-02-24T20:43:04.059Z [error]: username does not meet minimum length of 5
+2024-02-24T20:43:04.070Z [error]: password does not meet minimum length of 5
+2024-02-24T20:43:04.071Z [error]: email does not conform to the "email" format
+2024-02-24T20:43:04.072Z [error]: requires property "username"
+2024-02-24T20:43:04.131Z [error]: username does not meet minimum length of 5
+2024-02-24T20:43:04.132Z [error]: password does not meet minimum length of 5
+2024-02-24T20:43:04.194Z [error]: amount must be strictly greater than 0
+2024-02-24T20:43:04.227Z [error]: description does not meet minimum length of 1
+2024-02-24T20:43:04.244Z [error]: amount is not of a type(s) number
+2024-02-24T20:43:04.261Z [error]: requires property "amount",requires property "description"
+2024-02-24T20:43:04.368Z [error]: ticket_id is not of a type(s) number
+2024-02-24T20:43:04.385Z [error]: role does not exactly match expected constant: manager
+2024-02-24T20:43:04.402Z [error]: status does not exactly match expected constant: Pending
+2024-02-24T20:44:54.381Z [error]: username does not meet minimum length of 5
+2024-02-24T20:44:54.393Z [error]: password does not meet minimum length of 5
+2024-02-24T20:44:54.394Z [error]: email does not conform to the "email" format
+2024-02-24T20:44:54.395Z [error]: requires property "username"
+2024-02-24T20:44:54.457Z [error]: username does not meet minimum length of 5
+2024-02-24T20:44:54.458Z [error]: password does not meet minimum length of 5
+2024-02-24T20:44:54.646Z [error]: amount must be strictly greater than 0
+2024-02-24T20:44:54.669Z [error]: description does not meet minimum length of 1
+2024-02-24T20:44:54.691Z [error]: amount is not of a type(s) number
+2024-02-24T20:44:54.709Z [error]: requires property "amount",requires property "description"
+2024-02-24T20:44:54.799Z [error]: ticket_id is not of a type(s) number
+2024-02-24T20:44:54.821Z [error]: role does not exactly match expected constant: manager
+2024-02-24T20:44:54.843Z [error]: status does not exactly match expected constant: Pending
+2024-02-24T20:44:54.861Z [error]: requires property "role",requires property "status"
+2024-02-24T20:45:19.951Z [error]: username does not meet minimum length of 5
+2024-02-24T20:45:19.962Z [error]: password does not meet minimum length of 5
+2024-02-24T20:45:19.963Z [error]: email does not conform to the "email" format
+2024-02-24T20:45:19.964Z [error]: requires property "username"
+2024-02-24T20:45:20.026Z [error]: username does not meet minimum length of 5
+2024-02-24T20:45:20.027Z [error]: password does not meet minimum length of 5
+2024-02-24T20:45:20.206Z [error]: amount must be strictly greater than 0
+2024-02-24T20:45:20.229Z [error]: description does not meet minimum length of 1
+2024-02-24T20:45:20.256Z [error]: amount is not of a type(s) number
+2024-02-24T20:45:20.274Z [error]: requires property "amount",requires property "description"
+2024-02-24T20:45:20.367Z [error]: ticket_id is not of a type(s) number
+2024-02-24T20:45:20.386Z [error]: role does not exactly match expected constant: manager
+2024-02-24T20:45:20.408Z [error]: status does not exactly match expected constant: Pending
+2024-02-24T20:45:20.426Z [error]: requires property "role",requires property "status"
+2024-02-24T20:49:43.648Z [error]: username does not meet minimum length of 5
+2024-02-24T20:49:43.659Z [error]: password does not meet minimum length of 5
+2024-02-24T20:49:43.660Z [error]: email does not conform to the "email" format
+2024-02-24T20:49:43.661Z [error]: requires property "username"
+2024-02-24T20:49:43.727Z [error]: username does not meet minimum length of 5
+2024-02-24T20:49:43.728Z [error]: password does not meet minimum length of 5
+2024-02-24T20:49:43.941Z [error]: amount must be strictly greater than 0
+2024-02-24T20:49:43.966Z [error]: description does not meet minimum length of 1
+2024-02-24T20:49:43.983Z [error]: amount is not of a type(s) number
+2024-02-24T20:49:44.000Z [error]: requires property "amount",requires property "description"
+2024-02-24T20:49:44.140Z [error]: ticket_id is not of a type(s) number
+2024-02-24T20:49:44.158Z [error]: role does not exactly match expected constant: manager
+2024-02-24T20:49:44.175Z [error]: status does not exactly match expected constant: Pending
+2024-02-24T20:49:44.192Z [error]: requires property "role",requires property "status"
+2024-02-24T20:56:50.630Z [info]: Incoming GET: /tickets?status=Pending
+2024-02-24T20:57:27.829Z [info]: Incoming PUT: /tickets/8
+2024-02-24T20:57:33.505Z [info]: Incoming PUT: /tickets/9
+2024-02-24T20:59:16.071Z [error]: username does not meet minimum length of 5
+2024-02-24T20:59:16.082Z [error]: password does not meet minimum length of 5
+2024-02-24T20:59:16.083Z [error]: email does not conform to the "email" format
+2024-02-24T20:59:16.084Z [error]: requires property "username"
+2024-02-24T20:59:16.142Z [error]: username does not meet minimum length of 5
+2024-02-24T20:59:16.143Z [error]: password does not meet minimum length of 5
+2024-02-24T20:59:16.344Z [error]: amount must be strictly greater than 0
+2024-02-24T20:59:16.368Z [error]: description does not meet minimum length of 1
+2024-02-24T20:59:16.386Z [error]: amount is not of a type(s) number
+2024-02-24T20:59:16.406Z [error]: requires property "amount",requires property "description"
+2024-02-24T20:59:16.497Z [error]: ticket_id is not of a type(s) number
+2024-02-24T20:59:16.515Z [error]: role does not exactly match expected constant: manager
+2024-02-24T20:59:16.532Z [error]: status does not exactly match expected constant: Pending
+2024-02-24T20:59:16.550Z [error]: requires property "role",requires property "status"
+2024-02-24T21:03:09.299Z [error]: username does not meet minimum length of 5
+2024-02-24T21:03:09.310Z [error]: password does not meet minimum length of 5
+2024-02-24T21:03:09.311Z [error]: email does not conform to the "email" format
+2024-02-24T21:03:09.312Z [error]: requires property "username"
+2024-02-24T21:03:09.375Z [error]: username does not meet minimum length of 5
+2024-02-24T21:03:09.376Z [error]: password does not meet minimum length of 5
+2024-02-24T21:03:09.599Z [error]: amount must be strictly greater than 0
+2024-02-24T21:03:09.624Z [error]: description does not meet minimum length of 1
+2024-02-24T21:03:09.642Z [error]: amount is not of a type(s) number
+2024-02-24T21:03:09.661Z [error]: requires property "amount",requires property "description"
+2024-02-24T21:03:09.753Z [error]: ticket_id is not of a type(s) number
+2024-02-24T21:03:09.773Z [error]: role does not exactly match expected constant: manager
+2024-02-24T21:03:09.793Z [error]: status does not exactly match expected constant: Pending
+2024-02-24T21:03:09.815Z [error]: requires property "role",requires property "status"
+2024-02-24T21:06:29.613Z [error]: username does not meet minimum length of 5
+2024-02-24T21:06:29.624Z [error]: password does not meet minimum length of 5
+2024-02-24T21:06:29.625Z [error]: email does not conform to the "email" format
+2024-02-24T21:06:29.626Z [error]: requires property "username"
+2024-02-24T21:06:29.692Z [error]: username does not meet minimum length of 5
+2024-02-24T21:06:29.693Z [error]: password does not meet minimum length of 5
+2024-02-24T21:06:29.868Z [error]: amount must be strictly greater than 0
+2024-02-24T21:06:29.892Z [error]: description does not meet minimum length of 1
+2024-02-24T21:06:29.909Z [error]: amount is not of a type(s) number
+2024-02-24T21:06:29.927Z [error]: requires property "amount",requires property "description"
+2024-02-24T21:06:30.015Z [error]: ticket_id is not of a type(s) number
+2024-02-24T21:06:30.034Z [error]: role does not exactly match expected constant: manager
+2024-02-24T21:06:30.051Z [error]: status does not exactly match expected constant: Pending
+2024-02-24T21:06:30.071Z [error]: requires property "role",requires property "status"
+2024-02-24T21:07:41.477Z [error]: username does not meet minimum length of 5
+2024-02-24T21:07:41.487Z [error]: password does not meet minimum length of 5
+2024-02-24T21:07:41.488Z [error]: email does not conform to the "email" format
+2024-02-24T21:07:41.490Z [error]: requires property "username"
+2024-02-24T21:07:41.550Z [error]: username does not meet minimum length of 5
+2024-02-24T21:07:41.551Z [error]: password does not meet minimum length of 5
+2024-02-24T21:07:41.741Z [error]: amount must be strictly greater than 0
+2024-02-24T21:07:41.768Z [error]: description does not meet minimum length of 1
+2024-02-24T21:07:41.785Z [error]: amount is not of a type(s) number
+2024-02-24T21:07:41.803Z [error]: requires property "amount",requires property "description"
+2024-02-24T21:07:41.895Z [error]: ticket_id is not of a type(s) number
+2024-02-24T21:07:41.912Z [error]: role does not exactly match expected constant: manager
+2024-02-24T21:07:41.930Z [error]: status does not exactly match expected constant: Pending
+2024-02-24T21:07:41.947Z [error]: requires property "role",requires property "status"
+2024-02-24T21:10:55.854Z [error]: username does not meet minimum length of 5
+2024-02-24T21:10:55.865Z [error]: password does not meet minimum length of 5
+2024-02-24T21:10:55.866Z [error]: email does not conform to the "email" format
+2024-02-24T21:10:55.867Z [error]: requires property "username"
+2024-02-24T21:10:55.943Z [error]: username does not meet minimum length of 5
+2024-02-24T21:10:55.944Z [error]: password does not meet minimum length of 5
+2024-02-24T21:10:56.149Z [error]: amount must be strictly greater than 0
+2024-02-24T21:10:56.171Z [error]: description does not meet minimum length of 1
+2024-02-24T21:10:56.188Z [error]: amount is not of a type(s) number
+2024-02-24T21:10:56.206Z [error]: requires property "amount",requires property "description"
+2024-02-24T21:10:56.301Z [error]: ticket_id is not of a type(s) number
+2024-02-24T21:10:56.320Z [error]: role does not exactly match expected constant: manager
+2024-02-24T21:10:56.342Z [error]: status does not exactly match expected constant: Pending
+2024-02-24T21:10:56.360Z [error]: requires property "role",requires property "status"
+2024-02-24T21:12:36.075Z [error]: username does not meet minimum length of 5
+2024-02-24T21:12:36.087Z [error]: password does not meet minimum length of 5
+2024-02-24T21:12:36.088Z [error]: email does not conform to the "email" format
+2024-02-24T21:12:36.089Z [error]: requires property "username"
+2024-02-24T21:12:36.154Z [error]: username does not meet minimum length of 5
+2024-02-24T21:12:36.155Z [error]: password does not meet minimum length of 5
+2024-02-24T21:12:36.332Z [error]: amount must be strictly greater than 0
+2024-02-24T21:12:36.360Z [error]: description does not meet minimum length of 1
+2024-02-24T21:12:36.383Z [error]: amount is not of a type(s) number
+2024-02-24T21:12:36.401Z [error]: requires property "amount",requires property "description"
+2024-02-24T21:12:36.492Z [error]: ticket_id is not of a type(s) number
+2024-02-24T21:12:36.511Z [error]: role does not exactly match expected constant: manager
+2024-02-24T21:12:36.528Z [error]: status does not exactly match expected constant: Pending
+2024-02-24T21:12:36.544Z [error]: requires property "role",requires property "status"
+2024-02-24T21:15:35.600Z [error]: username does not meet minimum length of 5
+2024-02-24T21:15:35.611Z [error]: password does not meet minimum length of 5
+2024-02-24T21:15:35.612Z [error]: email does not conform to the "email" format
+2024-02-24T21:15:35.613Z [error]: requires property "username"
+2024-02-24T21:15:35.673Z [error]: username does not meet minimum length of 5
+2024-02-24T21:15:35.674Z [error]: password does not meet minimum length of 5
+2024-02-24T21:15:35.832Z [error]: amount must be strictly greater than 0
+2024-02-24T21:15:35.856Z [error]: description does not meet minimum length of 1
+2024-02-24T21:15:35.873Z [error]: amount is not of a type(s) number
+2024-02-24T21:15:35.890Z [error]: requires property "amount",requires property "description"
+2024-02-24T21:15:35.979Z [error]: ticket_id is not of a type(s) number
+2024-02-24T21:15:35.997Z [error]: role does not exactly match expected constant: manager
+2024-02-24T21:15:36.014Z [error]: status does not exactly match expected constant: Pending
+2024-02-24T21:15:36.035Z [error]: requires property "role",requires property "status"
+2024-02-24T21:16:31.585Z [error]: username does not meet minimum length of 5
+2024-02-24T21:16:31.596Z [error]: password does not meet minimum length of 5
+2024-02-24T21:16:31.597Z [error]: email does not conform to the "email" format
+2024-02-24T21:16:31.598Z [error]: requires property "username"
+2024-02-24T21:16:31.657Z [error]: username does not meet minimum length of 5
+2024-02-24T21:16:31.658Z [error]: password does not meet minimum length of 5
+2024-02-24T21:16:31.812Z [error]: amount must be strictly greater than 0
+2024-02-24T21:16:31.837Z [error]: description does not meet minimum length of 1
+2024-02-24T21:16:31.855Z [error]: amount is not of a type(s) number
+2024-02-24T21:16:31.873Z [error]: requires property "amount",requires property "description"
+2024-02-24T21:16:31.961Z [error]: ticket_id is not of a type(s) number
+2024-02-24T21:16:31.977Z [error]: role does not exactly match expected constant: manager
+2024-02-24T21:16:31.994Z [error]: status does not exactly match expected constant: Pending
+2024-02-24T21:16:32.012Z [error]: requires property "role",requires property "status"
+2024-02-24T21:16:32.238Z [error]: status is not one of enum values: Approved,Denied
+2024-02-24T21:17:57.390Z [error]: username does not meet minimum length of 5
+2024-02-24T21:17:57.400Z [error]: password does not meet minimum length of 5
+2024-02-24T21:17:57.402Z [error]: email does not conform to the "email" format
+2024-02-24T21:17:57.403Z [error]: requires property "username"
+2024-02-24T21:17:57.464Z [error]: username does not meet minimum length of 5
+2024-02-24T21:17:57.465Z [error]: password does not meet minimum length of 5
+2024-02-24T21:17:57.679Z [error]: amount must be strictly greater than 0
+2024-02-24T21:17:57.706Z [error]: description does not meet minimum length of 1
+2024-02-24T21:17:57.729Z [error]: amount is not of a type(s) number
+2024-02-24T21:17:57.747Z [error]: requires property "amount",requires property "description"
+2024-02-24T21:17:57.835Z [error]: ticket_id is not of a type(s) number
+2024-02-24T21:17:57.851Z [error]: role does not exactly match expected constant: manager
+2024-02-24T21:17:57.868Z [error]: status does not exactly match expected constant: Pending
+2024-02-24T21:17:57.888Z [error]: requires property "role",requires property "status"
+2024-02-24T21:17:58.125Z [error]: status is not one of enum values: Approved,Denied
+2024-02-24T21:18:54.643Z [error]: username does not meet minimum length of 5
+2024-02-24T21:18:54.654Z [error]: password does not meet minimum length of 5
+2024-02-24T21:18:54.655Z [error]: email does not conform to the "email" format
+2024-02-24T21:18:54.656Z [error]: requires property "username"
+2024-02-24T21:18:54.717Z [error]: username does not meet minimum length of 5
+2024-02-24T21:18:54.718Z [error]: password does not meet minimum length of 5
+2024-02-24T21:18:54.885Z [error]: amount must be strictly greater than 0
+2024-02-24T21:18:54.911Z [error]: description does not meet minimum length of 1
+2024-02-24T21:18:54.928Z [error]: amount is not of a type(s) number
+2024-02-24T21:18:54.945Z [error]: requires property "amount",requires property "description"
+2024-02-24T21:18:55.033Z [error]: ticket_id is not of a type(s) number
+2024-02-24T21:18:55.050Z [error]: role does not exactly match expected constant: manager
+2024-02-24T21:18:55.067Z [error]: status does not exactly match expected constant: Pending
+2024-02-24T21:18:55.084Z [error]: requires property "role",requires property "status"
+2024-02-24T21:18:55.315Z [error]: status is not one of enum values: Approved,Denied
+2024-02-24T21:21:03.662Z [error]: username does not meet minimum length of 5
+2024-02-24T21:21:03.672Z [error]: password does not meet minimum length of 5
+2024-02-24T21:21:03.673Z [error]: email does not conform to the "email" format
+2024-02-24T21:21:03.675Z [error]: requires property "username"
+2024-02-24T21:21:03.742Z [error]: username does not meet minimum length of 5
+2024-02-24T21:21:03.743Z [error]: password does not meet minimum length of 5
+2024-02-24T21:21:03.931Z [error]: amount must be strictly greater than 0
+2024-02-24T21:21:03.958Z [error]: description does not meet minimum length of 1
+2024-02-24T21:21:03.982Z [error]: amount is not of a type(s) number
+2024-02-24T21:21:04.002Z [error]: requires property "amount",requires property "description"
+2024-02-24T21:21:04.099Z [error]: ticket_id is not of a type(s) number
+2024-02-24T21:21:04.117Z [error]: role does not exactly match expected constant: manager
+2024-02-24T21:21:04.133Z [error]: status does not exactly match expected constant: Pending
+2024-02-24T21:21:04.154Z [error]: requires property "role",requires property "status"
+2024-02-24T21:21:04.381Z [error]: status is not one of enum values: Approved,Denied
+2024-02-24T21:21:37.589Z [error]: username does not meet minimum length of 5
+2024-02-24T21:21:37.599Z [error]: password does not meet minimum length of 5
+2024-02-24T21:21:37.600Z [error]: email does not conform to the "email" format
+2024-02-24T21:21:37.601Z [error]: requires property "username"
+2024-02-24T21:21:37.664Z [error]: username does not meet minimum length of 5
+2024-02-24T21:21:37.665Z [error]: password does not meet minimum length of 5
+2024-02-24T21:21:37.882Z [error]: amount must be strictly greater than 0
+2024-02-24T21:21:37.909Z [error]: description does not meet minimum length of 1
+2024-02-24T21:21:37.927Z [error]: amount is not of a type(s) number
+2024-02-24T21:21:37.944Z [error]: requires property "amount",requires property "description"
+2024-02-24T21:21:38.030Z [error]: ticket_id is not of a type(s) number
+2024-02-24T21:21:38.047Z [error]: role does not exactly match expected constant: manager
+2024-02-24T21:21:38.064Z [error]: status does not exactly match expected constant: Pending
+2024-02-24T21:21:38.082Z [error]: requires property "role",requires property "status"
+2024-02-24T21:21:38.307Z [error]: status is not one of enum values: Approved,Denied
+2024-02-24T21:23:54.878Z [error]: username does not meet minimum length of 5
+2024-02-24T21:23:54.889Z [error]: password does not meet minimum length of 5
+2024-02-24T21:23:54.890Z [error]: email does not conform to the "email" format
+2024-02-24T21:23:54.891Z [error]: requires property "username"
+2024-02-24T21:23:54.956Z [error]: username does not meet minimum length of 5
+2024-02-24T21:23:54.958Z [error]: password does not meet minimum length of 5
+2024-02-24T21:23:55.136Z [error]: amount must be strictly greater than 0
+2024-02-24T21:23:55.162Z [error]: description does not meet minimum length of 1
+2024-02-24T21:23:55.189Z [error]: amount is not of a type(s) number
+2024-02-24T21:23:55.207Z [error]: requires property "amount",requires property "description"
+2024-02-24T21:23:55.296Z [error]: ticket_id is not of a type(s) number
+2024-02-24T21:23:55.323Z [error]: role does not exactly match expected constant: manager
+2024-02-24T21:23:55.344Z [error]: status does not exactly match expected constant: Pending
+2024-02-24T21:23:55.362Z [error]: requires property "role",requires property "status"
+2024-02-24T21:23:55.601Z [error]: status is not one of enum values: Approved,Denied
+2024-02-24T21:25:41.355Z [info]: Incoming POST: /auth/register
+2024-02-24T21:25:53.299Z [info]: Incoming POST: /auth/register
+2024-02-24T21:26:01.303Z [info]: Incoming POST: /auth/register
+2024-02-24T21:26:01.304Z [error]: password does not meet minimum length of 5,name does not meet minimum length of 1
+2024-02-24T21:26:09.789Z [info]: Incoming POST: /auth/login
+2024-02-24T21:26:14.657Z [info]: Incoming POST: /auth/login
+2024-02-24T21:26:21.619Z [info]: Incoming POST: /auth/login
+2024-02-24T21:27:10.639Z [info]: Incoming POST: /tickets
+2024-02-24T21:27:10.640Z [error]: amount is not of a type(s) number,amount does not meet minimum length of 1
+2024-02-24T21:27:17.258Z [info]: Incoming POST: /tickets
+2024-02-24T21:28:11.747Z [info]: Incoming GET: /tickets?status=Pending
+2024-02-24T21:28:25.342Z [info]: Incoming POST: /auth/login
+2024-02-24T21:28:42.154Z [info]: Incoming GET: /tickets?status=Pending
+2024-02-24T21:29:12.694Z [info]: Incoming PUT: /tickets/0
+2024-02-24T21:29:51.870Z [info]: Incoming PUT: /tickets/0
+2024-02-24T21:30:17.646Z [info]: Incoming PUT: /tickets/0
+2024-02-24T21:30:31.167Z [info]: Incoming PUT: /tickets/0
+2024-02-24T21:30:45.172Z [info]: Incoming PUT: /tickets/7
+2024-02-24T21:30:53.961Z [info]: Incoming PUT: /tickets/0
+2024-02-24T21:31:16.260Z [info]: Incoming GET: /auth/?username=kevin123
+2024-02-24T21:32:04.280Z [info]: Incoming GET: /auth/?username=kevin123
+2024-02-24T21:32:23.373Z [info]: Incoming GET: /tickets/0
+2024-02-24T21:32:27.206Z [info]: Incoming GET: /tickets/1
