@@ -15,6 +15,7 @@ const { ensureLoggedIn, ensureAdmin } = require('../middleware/auth');
 // });
 
 router.get('/', ensureLoggedIn, async (req, res) => {
+    // /auth?username=username
     const currentUser = res.locals.user.username; 
     const username = req.query.username;
     try {

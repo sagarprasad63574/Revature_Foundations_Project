@@ -50,7 +50,7 @@ const viewEmployeeTickets = async (employee_id, role, status) => {
     const tickets = getAllTickets(employee_id, employees);
 
     if (tickets.length) return { response: true, message: "Pending tickets",  tickets };
-    return { response: false, message: "No tickets found!"}
+    return { response: true, message: "No tickets found!"}
 }
 
 function validateRole(receivedData) {
