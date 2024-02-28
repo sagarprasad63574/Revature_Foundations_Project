@@ -1,7 +1,7 @@
 const { createLogger, transports, format } = require("winston");
 
 const logger = createLogger({
-    level: "info", // log only messages with level 'info' and above
+    level: "info",
     format: format.combine(
         format.timestamp(),
         format.printf(({ timestamp, level, message }) => {
@@ -9,8 +9,7 @@ const logger = createLogger({
         })
     ),
     transports: [
-        new transports.Console(), // log to the console
-        new transports.File({ filename: "app.log" }), // log to a file
+        new transports.File({ filename: "app.log" }),
     ],
 });
 

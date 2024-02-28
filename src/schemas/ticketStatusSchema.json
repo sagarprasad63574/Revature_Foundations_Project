@@ -15,7 +15,10 @@
         },
         "status": {
             "type": "string",
-            "enum": ["Approved", "Denied"]
+            "enum": [
+                "Approved",
+                "Denied"
+            ]
         }
     },
     "additionalProperties": false,

@@ -1,23 +1,13 @@
 const jsonschema = require('jsonschema');
 const uuid = require('uuid');
-const ticketDAO = require('../repository/ticketDAO');
+
 const { getUserByUsername, getUserById } = require('./authService');
+const ticketDAO = require('../repository/ticketDAO');
 const ticketViewSchema = require('../schemas/ticketViewSchema.json');
 const ticketRegisterSchema = require('../schemas/ticketAddSchema.json');
 const ticketStatusSchema = require('../schemas/ticketStatusSchema.json');
 const roleSchema = require('../schemas/roleSchema.json');
 const logger = require('../util/logger');
-
-// const viewMyTickets = async (employee_id) => {
-
-//     const tickets = await ticketDAO.viewTickets(employee_id);
-
-//     if (tickets.length) {
-//         return { response: true, tickets };
-//     }
-
-//     return { response: false, tickets }
-// }
 
 const viewTicket = async (employee_id, ticket_id) => {
     let { response, errors } = validateViewTicket({ ticket_id });
@@ -49,8 +39,8 @@ const viewEmployeeTickets = async (employee_id, role, status) => {
     const employees = await ticketDAO.allEmployeeTickets("employee");
     const tickets = getAllTickets(employee_id, employees);
 
-    if (tickets.length) return { response: true, message: "Pending tickets",  tickets };
-    return { response: true, message: "No tickets found!"}
+    if (tickets.length) return { response: true, message: "Pending tickets", tickets };
+    return { response: true, message: "No tickets found!" }
 }
 
 function validateRole(receivedData) {
@@ -102,7 +92,7 @@ const addTicket = async (employee_id, receivedData) => {
         });
 
     if (data) {
-        let index = data.length-1; 
+        let index = data.length - 1;
         let ticket = data[index];
         if (index >= 0) ticket.index = index;
 
@@ -138,10 +128,10 @@ const updateStatus = async (ticket_id, manager_id, receivedDatadata) => {
     if (!isStatusChanged) return { response: false, errors: "Ticket was already processed!" }
 
     let ticketStatus = await ticketDAO.changeStatus(user.employee_id, ticket_id, receivedDatadata.status, manager_id);
-    
+
     if (ticketStatus) {
         const ticket = user.tickets[ticket_id];
-        return { response: true, user, ticket, status: ticketStatus.status, manager: ticketStatus.manager_id};
+        return { response: true, user, ticket, status: ticketStatus.status, manager: ticketStatus.manager_id };
     }
 
     return { response: false };

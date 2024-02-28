@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
+
 const { ensureLoggedIn, ensureAdmin } = require('../middleware/auth');
 const ticketService = require('../service/ticketService');
-
 
 router.get('/', ensureAdmin, async (req, res, next) => {
     const role = res.locals.user.role;
@@ -21,23 +21,6 @@ router.get('/', ensureAdmin, async (req, res, next) => {
     }
 });
 
-
-// router.get('/', ensureLoggedIn, async (req, res, next) => {
-//     const employee_id = res.locals.user.id;
-
-//     try {
-//         const { response, tickets } = await ticketService.viewMyTickets(employee_id);
-//         if (response) {
-//             return res.status(200).json({ tickets })
-//         } else {
-//             return res.status(400).json({ message: "No tickets found!", tickets })
-//         }
-//     } catch (err) {
-//         return next(err);
-//     }
-// });
-
-
 router.get('/:id', ensureLoggedIn, async (req, res, next) => {
     const employee_id = res.locals.user.id;
     const ticket_id = +req.params.id;
@@ -45,7 +28,7 @@ router.get('/:id', ensureLoggedIn, async (req, res, next) => {
     try {
         const { response, ticket } = await ticketService.viewTicket(employee_id, ticket_id);
         if (response) {
-            return res.status(200).json({ ticket })
+            return res.status(200).json(ticket)
         } else {
             return res.status(400).json({ message: "No tickets found!", ticket_id })
         }
@@ -107,6 +90,5 @@ router.put('/:id', ensureAdmin, async (req, res, next) => {
         return next(err);
     }
 });
-
 
 module.exports = router; 

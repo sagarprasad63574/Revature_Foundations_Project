@@ -4,23 +4,13 @@ const router = express.Router();
 const authService = require('../service/authService');
 const { createToken } = require('../util/tokens');
 const { ensureLoggedIn, ensureAdmin } = require('../middleware/auth');
-// router.get('/', async (req, res) => {
-//     try {
-//         const employees = await authService.getAllItem();
-//         res.status(200).json(employees);
-//     } catch (err) {
-//         console.error(err);
-//         res.status(500).json({ err: 'Something went wrong' });
-//     }
-// });
 
 router.get('/', ensureLoggedIn, async (req, res) => {
-    // /auth?username=username
-    const currentUser = res.locals.user.username; 
+    const currentUser = res.locals.user.username;
     const username = req.query.username;
     try {
         const validUser = await authService.validCurrentUser(currentUser, username);
-        if (!validUser) return res.status(403).json({ message: "Access denied!"});
+        if (!validUser) return res.status(403).json({ message: "Access denied!" });
 
         const user = await authService.getUserByUsername(username);
         if (user) {
@@ -43,7 +33,6 @@ router.get('/', ensureLoggedIn, async (req, res) => {
     }
 });
 
-
 router.post("/register", async function (req, res, next) {
     try {
         const { response, errors } = await authService.registerUser(req.body);
@@ -56,7 +45,6 @@ router.post("/register", async function (req, res, next) {
         return next(err);
     }
 });
-
 
 router.post("/login", async function (req, res, next) {
     try {

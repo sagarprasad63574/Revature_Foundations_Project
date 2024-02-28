@@ -1,16 +1,12 @@
-const userDAO = require('../repository/userDAO');
 const uuid = require('uuid');
 const jsonschema = require('jsonschema');
+const bcrypt = require('bcrypt');
+
+const { BCRYPT_WORK_FACTOR } = require('../config')
+const userDAO = require('../repository/userDAO');
 const userAuthSchema = require('../schemas/userAuth.json');
 const userRegisterSchema = require('../schemas/userRegisterSchema.json');
 const logger = require('../util/logger');
-const bcrypt = require('bcrypt');
-const { BCRYPT_WORK_FACTOR } = require('../config')
-
-const getAllItem = async () => {
-    const items = await userDAO.getAllItems();
-    return items;
-}
 
 const registerUser = async (receivedData) => {
     let employee_id = uuid.v4();
@@ -108,8 +104,8 @@ const deleteUser = async (username) => {
 
     return { response: false, message: "No username found!" }
 }
+
 module.exports = {
-    getAllItem,
     getUserByUsername,
     getUserById,
     validCurrentUser,

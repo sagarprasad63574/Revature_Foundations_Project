@@ -1,12 +1,8 @@
 const { DynamoDBClient } = require('@aws-sdk/client-dynamodb');
 const {
     DynamoDBDocumentClient,
-    GetCommand,
-    PutCommand,
     UpdateCommand,
-    DeleteCommand,
     QueryCommand,
-    ScanCommand
 } = require('@aws-sdk/lib-dynamodb');
 const logger = require('../util/logger');
 

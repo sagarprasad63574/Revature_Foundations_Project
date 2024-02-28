@@ -3,10 +3,8 @@ const {
     DynamoDBDocumentClient,
     GetCommand,
     PutCommand,
-    UpdateCommand,
     DeleteCommand,
     QueryCommand,
-    ScanCommand
 } = require('@aws-sdk/lib-dynamodb');
 const logger = require('../util/logger');
 
@@ -22,19 +20,6 @@ const dynamoDBClient = new DynamoDBClient({
 
 const documentClient = DynamoDBDocumentClient.from(dynamoDBClient);
 const TableName = "FOUNDATIONS_PROJECT";
-
-const getAllItems = async () => {
-    const command = new ScanCommand({
-        TableName,
-    });
-
-    try {
-        const data = await documentClient.send(command);
-        return data.Items;
-    } catch (error) {
-        logger.error(error);
-    }
-}
 
 const createUser = async (item) => {
     const command = new PutCommand({
@@ -56,7 +41,7 @@ const getUserByUsername = async (username) => {
         TableName,
         IndexName: "username-index",
         KeyConditionExpression: "username = :username",
-        ExpressionAttributeValues: { ":username" : username}
+        ExpressionAttributeValues: { ":username": username }
     });
 
     try {
@@ -98,7 +83,6 @@ const deleteUser = async (employee_id) => {
 }
 
 module.exports = {
-    getAllItems,
     getUserByUsername,
     getUserById,
     createUser,
