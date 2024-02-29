@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">71.79% </span>
+                <span class="strong">81.81% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>28/39</span>
+                <span class='fraction'>27/33</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">80% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>4/5</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">71.79% </span>
+                <span class="strong">81.81% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>28/39</span>
+                <span class='fraction'>27/33</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -152,25 +152,7 @@
 <a name='L87'></a><a href='#L87'>87</a>
 <a name='L88'></a><a href='#L88'>88</a>
 <a name='L89'></a><a href='#L89'>89</a>
-<a name='L90'></a><a href='#L90'>90</a>
-<a name='L91'></a><a href='#L91'>91</a>
-<a name='L92'></a><a href='#L92'>92</a>
-<a name='L93'></a><a href='#L93'>93</a>
-<a name='L94'></a><a href='#L94'>94</a>
-<a name='L95'></a><a href='#L95'>95</a>
-<a name='L96'></a><a href='#L96'>96</a>
-<a name='L97'></a><a href='#L97'>97</a>
-<a name='L98'></a><a href='#L98'>98</a>
-<a name='L99'></a><a href='#L99'>99</a>
-<a name='L100'></a><a href='#L100'>100</a>
-<a name='L101'></a><a href='#L101'>101</a>
-<a name='L102'></a><a href='#L102'>102</a>
-<a name='L103'></a><a href='#L103'>103</a>
-<a name='L104'></a><a href='#L104'>104</a>
-<a name='L105'></a><a href='#L105'>105</a>
-<a name='L106'></a><a href='#L106'>106</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L90'></a><a href='#L90'>90</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -192,19 +174,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
@@ -268,7 +237,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -278,10 +246,8 @@ const {
     DynamoDBDocumentClient,
     GetCommand,
     PutCommand,
-    UpdateCommand,
     DeleteCommand,
     QueryCommand,
-    ScanCommand
 } = require('@aws-sdk/lib-dynamodb');
 const logger = require('../util/logger');
 &nbsp;
@@ -297,19 +263,6 @@ const dynamoDBClient = new DynamoDBClient({
 &nbsp;
 const documentClient = DynamoDBDocumentClient.from(dynamoDBClient);
 const TableName = "FOUNDATIONS_PROJECT";
-&nbsp;
-const getAllItems = <span class="fstat-no" title="function not covered" >as</span>ync () =&gt; {
-    const command = <span class="cstat-no" title="statement not covered" >new ScanCommand({</span>
-        TableName,
-    });
-&nbsp;
-<span class="cstat-no" title="statement not covered" >    try {</span>
-        const data = <span class="cstat-no" title="statement not covered" >await documentClient.send(command);</span>
-<span class="cstat-no" title="statement not covered" >        return data.Items;</span>
-    } catch (error) {
-<span class="cstat-no" title="statement not covered" >        logger.error(error);</span>
-    }
-}
 &nbsp;
 const createUser = async (item) =&gt; {
     const command = new PutCommand({
@@ -331,7 +284,7 @@ const getUserByUsername = async (username) =&gt; {
         TableName,
         IndexName: "username-index",
         KeyConditionExpression: "username = :username",
-        ExpressionAttributeValues: { ":username" : username}
+        ExpressionAttributeValues: { ":username": username }
     });
 &nbsp;
     try {
@@ -373,7 +326,6 @@ const deleteUser = async (employee_id) =&gt; {
 }
 &nbsp;
 module.exports = {
-    getAllItems,
     getUserByUsername,
     getUserById,
     createUser,
@@ -385,7 +337,7 @@ module.exports = {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-02-25T18:33:03.879Z
+                at 2024-02-29T20:09:16.288Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

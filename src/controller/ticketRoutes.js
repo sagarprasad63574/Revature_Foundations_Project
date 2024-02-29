@@ -78,7 +78,7 @@ router.put('/:id', ensureAdmin, async (req, res, next) => {
                 username: user.username,
                 employee_id: user.employee_id,
                 ticket_id: ticket_id,
-                amount: ticket.amount,
+                amount: ticket.price,
                 description: ticket.description,
                 status: status,
                 manager_id: manager
